@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Millimetre_Condensed Regular';
+    src:    url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.eot');
+    src:    url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.eot?#iefix') format('embedded-opentype'),
+            url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.woff') format('woff'),
+            url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.woff2') format('woff2'),
+            url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.ttf') format('truetype'),
+            url('Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
