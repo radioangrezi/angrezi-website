@@ -365,6 +365,7 @@ function attachStreamMetadataToPlayer(){
             var artist_elm = $(".now_playing .artist");
             var show_elm = $(".now_playing .show_title");
             var description_elm = $(".now_playing .show_description");
+            var marquee_elm = $(".now_playing .marquee");
             var str_off_air = "Off Air";
             var str_offline = "Offline";
             if (data.current === null) {

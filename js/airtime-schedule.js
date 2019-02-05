@@ -87,7 +87,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               }
               //episode = episode+"<div class='row calendar__show"+currentEpisode+"' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><div class='xs-2' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</div><div class='xs-10' itemprop='name'>"+episodeName+"</div><div class='xs-10' itemprop='description'>"+episodeDescription+"</div></div><br/>";
                 
-              episode = episode+"<article class='show-item'><p class='show-date'>SATURDAY, 04.02.2019</p><div class='headlines'><h1 class='show-time'>"+episodeTime+"</h1><h1 class='show-title'>"+episodeName+"</h1></div><h2 class='show-host'>"+episodeDescription+"</h2><p>"+episodeDescription+"</p></article>"
+              episode = episode+"<article class='show-item'><p class='show-date'></p><div class='headlines'><h1 class='show-time'>"+episodeTime+"</h1><h1 class='show-title'>"+episodeName+"</h1></div><h2 class='show-host'></h2><p>"+episodeDescription+"</p></article>"
             }
           }
         }

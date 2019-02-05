@@ -1,72 +1,135 @@
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-body {
-    padding: 2rem; 
-    background-color: #ff8549;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-ul, li, p {
+body,
+wrapper,
+ul,
+li,
+p {
     margin: 0;
     padding: 0;
 }
 
-ul {
-    list-style-type:none;
-    }
-
-.main-head {
-  /*position: -webkit-sticky; /* Safari 
-  position: sticky;*/
-  top: 0;
-  background-color: #ff8549;  
-  grid-area: header;    
-  border: 1px solid black;
-   z-index: 1;
-    }
-
-.main-nav {
-    grid-area: nav;
-    background-color: inherit;
-    
+body {
+    padding: 2rem;
+    background-color: #ff8549;
 }
-
-
-#telephone-block {
-    display: block;
-}
-
-.flex-item {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    text-align: center;
-    font-family: sans-serif;
-   /* background-color: aqua;
-    border: 1px solid black;*/
-}
-
-.show-section {
-    margin-top:-20px;
-    grid-area: main;
-}
-
-.site-footer {
-    background-color: inherit;
-    border: 1px solid black;
-    grid-area: footer;
-}
-
 
 .wrapper {
     display: grid;
     /*grid-gap: 20px;*/
     grid-template-areas:
-    "header"
-    "status"    
-    "main"    
-    "footer"    
+        "header"
+        "main"
+        "footer"
+}
 
+ul {
+    list-style-type: none;
+}
+
+address {
+    font-style: normal;
+}
+
+.main-head {
+    grid-area: header;
+    background-color: #ff8549;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+
+
+main {
+        max-width: none;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /*grid-gap: 2rem;*/  
+    }
+
+.show-section {
+    grid-area: main;
+    margin-top: -20px;
+
+}
+
+
+.site-footer {
+    padding: 2rem;
+    font-family: 'Sporting Grotesque_Regular';
+    background-color: inherit;
+    border: 1px solid black;
+    grid-area: footer;
+}
+
+.main-nav {
+    grid-area: nav;
+    background-color: inherit;
+}
+
+.marquee {
+    box-sizing: border-box;
+    padding: 0.1rem;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: inherit;
+    color: black;
+    font-family: 'terminal_grotesque';
+    border-bottom: 1px solid black;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.marquee div {
+    display: block;
+    width: 200%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+.now_playing {
+    white-space: nowrap;
+}
+
+
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+#muses_skin {
+    display: none;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.black-link {
+    color: black;
 }
 
 .logo-link {
@@ -76,231 +139,82 @@ ul {
     padding-bottom: 5px;
     border: 1px solid black;
     box-shadow: 5px 5px;
-      box-sizing: border-box;
-
+    box-sizing: border-box;
 }
 
-.logo-link:hover{
+.logo-link:hover {
+    color: blue;
+}
+
+.logo-link:active {
     color: hotpink;
 }
 
-.logo-link:active{
-    color: red;
-}
-
 #radio-logo {
-        width: 130px;
-
+    width: 130px;
 }
 
-
-#controls {
-    font-family: 'Sporting Grotesque_Regular';
-}
-
-#play, #pause {
-    width:300px;
+#play {
+    width: 300px;
     height: 60px;
-
     background-color: inherit;
     color: black;
-    padding: 20px 0px;
+    padding: 1.4rem 0;
     border: 1px solid black;
-      box-shadow: 5px 5px;
-  box-sizing: border-box;
+    box-shadow: 5px 5px;
+    box-sizing: border-box;
     font-family: 'Sporting Grotesque_Regular';
-
     cursor: pointer;
 }
 
 #play:hover {
-    color: hotpink;
+    color: blue;
 }
 
 #play:active {
-    color: red;
-}
-
-#pause:hover {
     color: hotpink;
 }
 
+#pause:hover {
+    color: blue;
+}
+
 #pause:active {
-    color: red;
+    color: hotpink;
 }
 
 #call {
-    width:300px;
+    width: 300px;
     height: 60px;
-
-    padding-top: 20px;
-    padding-bottom:20px;
-        font-family: 'savateregular';
-
-    background-color: inherit; 
+    padding: 1rem 0;
+    font-family: 'savateregular';
+    background-color: inherit;
     border: 1px solid black;
     cursor: pointer;
-          box-shadow: 5px 5px;
-      box-sizing: border-box;
-
-
-}
-
-.player-wrapper {
-    /*
-    border: 1px solid black;
     box-shadow: 5px 5px;
-    cursor: pointer;*/
+    box-sizing: border-box;
 }
 
 #call:hover {
-color: hotpink;
+    color: blue;
 }
 
 #call:active {
-    color: red;
+    color: hotpink;
 }
 
-a {
+.flex-item > a {
     color: black;
     text-decoration: none;
 }
 
 
-/*
-#progress {
-   margin-left: 80px;
-   border: 1px solid black;
-    background-color: black;
-       cursor: pointer;
-
-    
-}
-
-#bar {
-   height: 20px;
-   background-color: white;
-   width: 0;
-}
-
-*/
-
 .headlines {
-    display: flex;
-    justify-content: center;
+    /*display: flex;
+    justify-content: center;*/
 }
-
-@font-face {
-    font-family: 'Sporting Grotesque_Regular';
-    src:    url('fonts/Sporting_Grotesque-Regular_web.eot');
-    src:    url('fonts/Sporting_Grotesque-Regular_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Sporting_Grotesque-Regular_web.woff') format('woff'),
-            url('fonts/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
-            url('fonts/Sporting_Grotesque-Regular_web.ttf') format('truetype'),
-            url('fonts/Sporting_Grotesque-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'savateitalique';
-    src: url('fonts/savate-italique-webfont.eot');
-    src: url('fonts/savate-italique-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/savate-italique-webfont.woff2') format('woff2'),
-         url('fonts/savate-italique-webfont.woff') format('woff'),
-         url('fonts/savate-italique-webfont.ttf') format('truetype'),
-         url('fonts/savate-italique-webfont.svg#savateitalique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'savateregular';
-    src: url('fonts/savate-regular-webfont.eot');
-    src: url('fonts/savate-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/savate-regular-webfont.woff2') format('woff2'),
-         url('fonts/savate-regular-webfont.woff') format('woff'),
-         url('fonts/savate-regular-webfont.ttf') format('truetype'),
-         url('fonts/savate-regular-webfont.svg#savateregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'VG5000';
-    src:    url('fonts/VG5000-Regular_web.eot');
-    src:    url('fonts/VG5000-Regular_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/VG5000-Regular_web.woff') format('woff'),
-            url('fonts/VG5000-Regular_web.woff2') format('woff2'),
-            url('fonts/VG5000-Regular_web.ttf') format('truetype'),
-            url('fonts/VG5000-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Millimetre';
-    src:    url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot');
-    src:    url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff') format('woff'),
-            url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff2') format('woff2'),
-            url('fonts/Millimetre/Bold/Millimetre-Bold_web.ttf') format('truetype'),
-            url('fonts/Millimetre/Bold/Millimetre-Bold_web.svg#svgFontName') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Millimetre';
-    src:    url('fonts/Millimetre/Regular/Millimetre-Regular_web.eot');
-    src:    url('fonts/Millimetre/Regular/Millimetre-Regular_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Millimetre/Regular/Millimetre-Regular_web.woff') format('woff'),
-            url('fonts/Millimetre/Regular/Millimetre-Regular_web.woff2') format('woff2'),
-            url('fonts/Millimetre/Regular/Millimetre-Regular_web.ttf') format('truetype'),
-            url('fonts/Millimetre/Regular/Millimetre-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Millimetre_Condensed';
-    src:    url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.eot');
-    src:    url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.woff') format('woff'),
-            url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.woff2') format('woff2'),
-            url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.ttf') format('truetype'),
-            url('fonts/Millimetre/CondensedRegular/Millimetre-Condensed_Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'lack_lineitalic';
-    src: url('fonts/Lack-Line-Italic.eot');
-    src: url('fonts/Lack-Line-Italic.woff2') format('woff2'),
-         url('fonts/Lack-Line-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'terminal_grotesque';
-    src: url('fonts/terminal-grotesque-webfont.eot');
-    src: url('fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-         url('fonts/terminal-grotesque-webfont.woff') format('woff'),
-         url('fonts/terminal-grotesque-webfont.ttf') format('truetype'),
-         url('fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
 @media (min-width: 1000px) {
-  /*.wrapper {
+    /*.wrapper {
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 
       "header  header"
@@ -308,185 +222,151 @@ a {
       "sidebar content"
       "ad      footer";
   }*/
-    
+
     .main-head {
-        position: -webkit-sticky; /* Safari */
-  position: sticky;
-        
-    }    
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-    .marquee-wrapper {
-    display: flex;
-}
-
-
-}
-
-
-
-.site-footer {
-    font-family: 'Sporting Grotesque_Regular';
-    padding: 20px;
-} 
-@supports (display: grid) {
-  main {
-    max-width: none;
-    margin: 0; }
-  article {
-    margin: 0; }
-  main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /*grid-gap: 2rem;*/ } }
-
-article {
-  display: flex;
-  flex-flow: column; }
-
-article > img {
-  order: -1;
-  align-self: center; }
-
-article {
-  padding: 1.5rem;
-    text-align: center;}
-
-article > h1 {
-  margin: 1rem 1rem 0;
-
-}
-.headlines {    
+        top: 0;
+        position: -webkit-sticky;
+        /* Safari */
+        position: sticky;
     }
 
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .marquee-wrapper {
+        display: flex;
+    }
+}
+
+article {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    padding: 1.8rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: inherit;
+}
+
+    
+
+article > img {
+    order: -1;
+    align-self: center;
+}
+
+
 .show-time {
-    font-size: 2.5em;
-    font-family: 'Millimetre', Arial;
+    font-size: 4em;
+    font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
     font-weight: bold;
+      transform: rotate(-25deg);
+
 }
 
 .show-title {
-    padding-left: 20px;
-    text-align: left;
-    font-size: 1.5em;
-        font-family: 'VG5000',Arial;
+    
+    padding-left: 1.5rem;
+    /*text-align: left;*/
+    font-size: 2em;
+    font-family: 'VG5000', Arial;
     line-height: 1;
 }
 
 .show-host {
+    margin: 0 1rem 0.5rem;
     font-size: 1.2em;
-    font-family: 'savateregular',Arial;
+    font-family: 'savateregular', Arial;
 }
 
 .show-date {
     margin: 0;
-    margin-top: 20px;
+    margin-top: 1rem;
     text-align: center;
     font-size: 0.8em;
+    
 }
 
-article > h2 {
-  margin: 0 1rem 0.5rem; }
-/*
-article > ul {
-  margin: 0 0 1rem; }
-*/
 article > p {
-  margin: 0.25em 1rem 1rem;
-  text-align: left;
-  font-family: 'Sporting Grotesque_Regular', Arial;
-  line-height:  1.3em;
-    font-size: 1em;
+    margin: 0.25em 1rem 1rem;
+    text-align: left;
+    font-family: 'Sporting Grotesque_Regular', Arial;
+    line-height: 1.25em;
+    font-size: 1rem;
 }
 
-main {
-  font-family:Helvetica, Arial, san-serif;
-  font-size: 100%; 
-    }
-
-article {
-  border: 1px solid black;
-/*  border-radius: 1rem; }*/
-    background-color: inherit;
-    /*font-family: 'savateregular';*/
-    font-family: Arial;
-
+@font-face {
+    font-family: 'Sporting Grotesque_Regular';
+    src: url('fonts/Sporting_Grotesque-Regular_web.eot');
+    src: url('fonts/Sporting_Grotesque-Regular_web.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Sporting_Grotesque-Regular_web.woff') format('woff'),
+        url('fonts/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
+        url('fonts/Sporting_Grotesque-Regular_web.ttf') format('truetype'),
+        url('fonts/Sporting_Grotesque-Regular_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.site-footer > a {
-    color: red;
-}
-/*article > button {
-  margin-top: auto;
-  background: teal;
-  color: white;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1.2rem; }*/
-
-.airtime_header {
-    grid-area: status;
+@font-face {
+    font-family: 'Sporting Grotesque_Bold';
+    src:    url('fonts/Sporting_Grotesque-Bold_web.eot');
+    src:    url('fonts/Sporting_Grotesque-Bold_web.eot?#iefix') format('embedded-opentype'),
+            url('fonts/Sporting_Grotesque-Bold_web.woff') format('woff'),
+            url('fonts/Sporting_Grotesque-Bold_web.woff2') format('woff2'),
+            url('fonts/Sporting_Grotesque-Bold_web.ttf') format('truetype'),
+            url('fonts/Sporting_Grotesque-Bold_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.airtime_button {
+
+@font-face {
+    font-family: 'savateregular';
+    src: url('fonts/savate-regular-webfont.eot');
+    src: url('fonts/savate-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/savate-regular-webfont.woff2') format('woff2'),
+        url('fonts/savate-regular-webfont.woff') format('woff'),
+        url('fonts/savate-regular-webfont.ttf') format('truetype'),
+        url('fonts/savate-regular-webfont.svg#savateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.now_playing {
+@font-face {
+    font-family: 'VG5000';
+    src: url('fonts/VG5000-Regular_web.eot');
+    src: url('fonts/VG5000-Regular_web.eot?#iefix') format('embedded-opentype'),
+        url('fonts/VG5000-Regular_web.woff') format('woff'),
+        url('fonts/VG5000-Regular_web.woff2') format('woff2'),
+        url('fonts/VG5000-Regular_web.ttf') format('truetype'),
+        url('fonts/VG5000-Regular_web.svg#svgFontName') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.calendar__title {
-    background-color: green;
+@font-face {
+    font-family: 'Millimetre';
+    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot');
+    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff') format('woff'),
+        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff2') format('woff2'),
+        url('fonts/Millimetre/Bold/Millimetre-Bold_web.ttf') format('truetype'),
+        url('fonts/Millimetre/Bold/Millimetre-Bold_web.svg#svgFontName') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
 
-.calendar__wrapper {
-    background-color: hotpink;
-}
-
-.marquee {
-    padding: 10px;
-  height: 40px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-    background-color: inherit;
-    color: black;
+@font-face {
     font-family: 'terminal_grotesque';
-        border-bottom: 1px solid black;
-    font-size: 25px;
-    text-transform: uppercase;
+    src: url('fonts/terminal-grotesque-webfont.eot');
+    src: url('fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+        url('fonts/terminal-grotesque-webfont.woff') format('woff'),
+        url('fonts/terminal-grotesque-webfont.ttf') format('truetype'),
+        url('fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-}
-
-.marquee div {
-  display: block;
-  width: 200%;
-  height: 30px;
-
-  position: absolute;
-  overflow: hidden;
-
-  animation: marquee 5s linear infinite;
-}
-
-.marquee span {
-  float: left;
-  width: 50%;
-}
-
-.now_playing {
-    white-space: nowrap;
-
-}
-
-#muses_skin {
-    display: none;
-}
-
-@keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
 }

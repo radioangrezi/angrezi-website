@@ -1,151 +1,130 @@
 <!doctype html>
 <html dir="ltr" lang="en-us">
       <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Radio Angrezi</title>
-        
-        <link rel="stylesheet" href="main.css">
-        
-        <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js" ></script>
-        <script type="text/javascript" src="js/mrp.js" ></script>
-        <script type="text/javascript" src="js/airtime-player.js"></script>
-        <script type="text/javascript" src="node_modules/moment/moment.js"></script>
-        <script type="text/javascript" src="js/airtime-schedule.js"></script>
-       
-      </head>
-         <body>
-          <div class="wrapper">
-           <header class="main-head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Radio Angrezi</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mrp.js"></script>
+    <script type="text/javascript" src="js/airtime-player.js"></script>
+    <script type="text/javascript" src="node_modules/moment/moment.js"></script>
+    <script type="text/javascript" src="js/airtime-schedule.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main-head">
             <div class="marquee-wrapper">
-            <div class="marquee">
-            <div class="now_playing">
-               <span class="artist"></span> 
-               <!--<span class="artist"></span> -->
-            </div>
-            </div>  
-            <div class="marquee">
-              <div class="now_playing">   
-                <span class="track_title"></span> 
-                <!--<span class="track_title"></span>  -->
+                <div class="marquee">
+                    <div class="now_playing">
+                        <span class="artist"></span>
+                        <span class="artist"></span> 
+                    </div>
                 </div>
-</div> 
-<div class="marquee">
-  <div class="now_playing">
-   
-    <span class="show_title"></span> 
-   <!-- <span class="show_title"></span> -->
-    
- 
-  </div>
-</div>                     
-       <!--
+                <div class="marquee">
+                    <div class="now_playing">
+                        <span class="track_title"></span>
+                        <span class="track_title"></span>
+                    </div>
+                </div>
+                <div class="marquee">
+                    <div class="now_playing">
+                        <span class="show_title"></span>
+                        <span class="show_title"></span>
+                    </div>
+                </div>
+                <!--
         <div class="marquee">
   <div class="now_playing">
     <span class="show_description"></span> 
     <span class="show_description"></span> 
   </div>
-</div> --> 
-</div>
-          <nav class="main-nav">
-           <ul>
-               <li class="flex-item">    
-                   
-                   <a><div class="player-wrapper">
-                   <div id="player">
-    <div class="airtime_player">
+</div> -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="flex-item">
+                        <a>
+                            <div class="player-wrapper">
+                                <div id="player">
+                                    <div class="airtime_player">
+                                        <div class="airtime_box">
+                                            <div id="play" class="play_button" onclick="musesPlayer.toggle()">START LIVESTREAM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="muses_skin">
+                                    <script type="text/javascript">
+                                        var musesPlayer = new MusesPlayer();
+                                    </script>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-item">
+                        <a href="tel:+49-421-95-95-12-12">
+                            <div id="call">
+                                <p>CALL IN ON US (0421 95 95 12 12)</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flex-item">
+                        <a href="#anchor-footer">
+                            <div class="logo-link"><img id="radio-logo" src="Images/Angrezi_Logo_Black.svg" alt="Radio Angrezi Logo"></div>
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
 
-        
 
-        <div class="airtime_box">
-                <div id="play" class="play_button" onclick="musesPlayer.toggle()">START LIVESTREAM</div>
-                
-            
 
-        </div>
+
+
+        <main class="show-section">
+
+
+            <article class="show-item">
+                <p class="show-date">SATURDAY, 04.02.2019</p>
+                <div class="headlines">
+                    <h1 class="show-time">16h00</h1>
+                    <h1 class="show-title">CHANGYE WEST &amp; FRIENDS</h1>
+                </div>
+                <h2 class="show-host">Chang Park</h2>
+                <p>This is the best Radio Show and Chang is gonna host it. Drunk. Real drunk. Keep listening if you want hear some real shit talking going on live.</p>
+            </article>
+    </main>
+    
+
+
+
+
+    <footer id="anchor-footer" class="site-footer">
+        <p>Contact Radio Angrezi: </p>
+        <address>
+            You can write us ideas about any kind of contribution or just to say hi at: <a class="black-link" href="mailto:radioangrezi@hfk-bremen.de">radioangrezi@hfk-bremen.de</a><br>
+            Or speak with us on the show: <a class="black-link" href="tel:+49-421-95-95-12-12">0421 95 95 12 12</a><br>
+            <br>
+            Visit our studio during our live streams:<br>
+            Radio Angrezi<br>
+            Hochschule f&uuml;r K&uuml;nste Bremen<br>
+            Am Speicher XI 8<br>
+            28217 Bremen <br>
+            Germany
+        </address>
+        <br>
+
+        <p>Editor: <a class="black-link" href="http://kajapoestges.com/">Kaja Poestges</a></p>
+        <p>Technical Direction &amp; Programming: <a class="black-link" href="http://jelkoarnds.com/">Jelko Arnds</a></p>
+        <p>Web Design: <a class="black-link" href="https://www.instagram.com/lennarthespenheide/">Lennart Hespenheide</a></p>
+
+    </footer>
 
     </div>
-    
-</div>
 
-<div id="muses_skin">
-    <script type="text/javascript">
-        var musesPlayer = new MusesPlayer();
-    </script>
-</div>
-
-              
-              </div></a>
-               </li>
-               
-               
-               
-              
-           <li class="flex-item" >
-           
-           
-           <a href="tel:+49-421-95-95-12-12"><div id="call"><p>CALL IN ON US (0421 95 95 12 12)</p></div></a>
-           </li>
-               
-           
-           <li class="flex-item">
-           
-           <a href="#anchor-footer"><div class="logo-link"><img id="radio-logo" src="Images/Angrezi_Logo_Black.svg" alt="Radio Angrezi Logo"></div></a></li>
-                 
-       </ul>
-       </nav>
-       
-   </header>
-       
-      
-       
-       
-       
-      <main class="show-section">
-     
-     
-      <article class="show-item">
-        <p class="show-date">SATURDAY, 04.02.2019</p>
-        <div class="headlines">
-        <h1 class="show-time">16h00</h1>
-        <h1 class="show-title">CHANGYE WEST &amp; FRIENDS</h1>
-        </div>
-        <h2 class="show-host">Chang Park</h2>
-        <p>This is the best Radio Show and Chang is gonna host it. Drunk. Real drunk. Keep listening if you want hear some real shit talking going on live.</p>
-      </article>
-      
-
-</div>
-   
-   
-    </main>   
-      
-      
-       
-       
-       <footer id="anchor-footer"class="site-footer">
-       <p>Contact Radio Angrezi: </p>
-       <address>
-       You can write us about ideas for any contribution or just to say <strong>hi</strong> at <a href="mailto:radioangrezi@hfk-bremen.de">radioangrezi@hfk-bremen.de</a><br>
-       Or speak with us on the show: <a href="tel:+49-421-95-95-12-12">0421 95 95 12 12</a><br>
-       <br>
-       Visit our studio during our live streams:<br>
-       Radio Angrezi<br>
-       Hochschule f&uuml;r K&uuml;nste Bremen<br>
-       Am Speicher XI 8<br>
-       28217 Bremen <br>
-       Germany
-       </address>
-       <br>
-          
-       <p>Editor: Kaja Poestges</p>
-       <p>Technical Direction &amp; Programming: Jelko Arnds</p>
-       <p>Graphic &amp; Web Design: Lennart Hespenheide</p>
-       
-       </footer> 
-       
-       </div>
-       
-  </body>
+</body>
 </html>
