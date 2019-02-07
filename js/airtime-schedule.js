@@ -13,8 +13,12 @@ function convertDate(timestamp) {
  var timeNow = Date.now()/1000 - 86400;
 
 $(document).ready(function() {
-$.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(calendarProgram){
+$.ajaxSetup({
+  timeout: 5000,
+});
+$.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(calendarProgram){
       var episode = "", episodeDay=false;
+      var episodeCounter = 0;
       for(var x in calendarProgram) {
         for (var y in calendarProgram[x]) {
           var z = calendarProgram[x][y],
@@ -23,6 +27,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               episodeDate = z['starts'],
               episodeDateEnd = z['ends'];
 
+          // Angrezi: Filter out shows containing "test"
           var filterout_expr = /test/i;
 
           if (filterout_expr.test(episodeName)) {
@@ -59,43 +64,46 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               if (episodeDay !== convertDate(episodeDateUnix)) {
                 episodeDay = convertDate(episodeDateUnix);
 
-                var dayIsLiveLichtenberg = episode + "<div class='row calendar__date calendar__date--live'><div class='xs-10 xs-offset-2'>" + episodeDay +"<br/><span style='font-style: italic;'>Live from Lichtenberg</span></div></div>";
-                var dayIsLiveArkaoda = episode + "<div class='row calendar__date calendar__date--live'><div class='xs-10 xs-offset-2'>" + episodeDay +"<br/><span style='font-style: italic;'>Live from Arkaoda</span></div></div>";
-                var dayIsNotLive = episode+"<div class='row calendar__date'><div class='xs-10 xs-offset-2'><span>"+episodeDay+"</span></div></div>";
+                var dayHeader = episode+"<article class='show-item'><span>"+episodeDay+"</span></article>";
 
-
-                if (typeof liveDays !== 'undefined') {
-                  if (liveDays !== false && episodeIsLiveFromLichtenberg(episodeDay)==true) {
-                    if (liveDaysOff !== false && episodeIsDayOff(episodeDay) == true) {
-                      episode = dayIsNotLive;
-                    } else {
-                      episode = dayIsLiveArkaoda;
-                    }
-                  } else if (liveDays !== false && episodeIsLiveFromFilterhouse(episodeDay)==true) {
-                    if (liveDaysOff !== false && episodeIsDayOff(episodeDay) == true) {
-                      episode = dayIsNotLive;
-                    } else {
-                      episode = dayIsLiveLichtenberg;
-                    }
-                  } else {
-                    episode = dayIsNotLive;
-                  }
-                } else {
-                  episode = dayIsNotLive;
-                }
+                episode = episode + dayHeader;
 
               }
               //episode = episode+"<div class='row calendar__show"+currentEpisode+"' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><div class='xs-2' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</div><div class='xs-10' itemprop='name'>"+episodeName+"</div><div class='xs-10' itemprop='description'>"+episodeDescription+"</div></div><br/>";
-                
-              episode = episode+"<article class='show-item'><p class='show-date'></p><div class='headlines'><h1 class='show-time'>"+episodeTime+"</h1><h1 class='show-title'>"+episodeName+"</h1></div><h2 class='show-host'></h2><p>"+episodeDescription+"</p></article>"
+
+              episodeCounter++;
+              episode = episode+"<article class='show-item' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><p class='show-date'></p>" +
+              "<p class='show-date'>"+episodeDay+"</p>" +
+              "<div class='headlines'>" +
+              "<h1 class='show-time' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</h1>" +
+              "<h1 class='show-title' itemprop='name'>"+episodeName+"</h1>" +
+              "</div>"+
+              "<p itemprop='description'>"+episodeDescription+"</p>"+ 
+              "</article>"
             }
           }
         }
+      }
+      if(episodeCounter < 1){
+        episode = "<article class='show-item'><p class='show-date'></p>" +
+              "<div class='headlines'>" +
+              "<h1 class='show-time'>" +
+              "<h1 class='show-title'>Offline</h1>" +
+              "</div>"+
+              "<p itemprop='description'>We are on holidays. Bye.</p>"+ 
+              "</article>"
       }
       //$('.calendar__data').append('<div class="row"><div class="xs-10 xs-offset-2"><h2>Live Schedule</h2></div></div>');
       $('.show-section').append(episode);
     }).fail(function(){
       // failed to load
-      $('.show-section').append('<p>There seems to be a temporary issue connecting to the Studio. Damn.</p>');
+      fail = "<article class='show-item'><p class='show-date'></p>" +
+              "<div class='headlines'>" +
+              "<h1 class='show-time'>" +
+              "<h1 class='show-title'>Sorry</h1>" +
+              "</div>"+
+              "<p itemprop='description'>There seems to be a temporary issue connecting to the Studio. Damn.</p>"+ 
+              "</article>"
+      $('.show-section').append(fail);
     });
 });
