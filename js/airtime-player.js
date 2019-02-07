@@ -357,10 +357,11 @@ var metadataTimer = null;
 //
 // The metadata is fetched when the current track is about to end.
 function attachStreamMetadataToPlayer(){
-    $.ajax({url: "http://stream.radioangrezi.de/api/live-info",
+    $.ajax({url: "http://sourcefabric.airtime.pro/api/live-info",
         data: {type:"interval",limit:"5"},
         dataType: "jsonp",
         success: function(data) {
+            var marquee_elm = $("p.now_playing");
             var title_elm = $(".now_playing .track_title");
             var artist_elm = $(".now_playing .artist");
             var show_elm = $(".now_playing .show_title");
@@ -368,89 +369,99 @@ function attachStreamMetadataToPlayer(){
             var marquee_elm = $(".now_playing .marquee");
             var str_off_air = "Off Air";
             var str_offline = "Offline";
+            var marquee_str = ""
             if (data.current === null) {
                 //title_elm.attr("title", $.i18n._("Off Air"));
                 //artist_elm.attr("title", $.i18n._("Offline"));
                 //Refresh in 20 seconds
-                title_elm.text(str_off_air);
-                artist_elm.text(str_offline);
-                title_elm.attr("title", str_off_air);
-                artist_elm.attr("title", str_offline);
+                // title_elm.text(str_off_air);
+                // artist_elm.text(str_offline);
+                // title_elm.attr("title", str_off_air);
+                // artist_elm.attr("title", str_offline);
+                marquee_str = str_offline;
                 time_to_next_track_starts = 20000;
+                $("p.now_playing").html(marquee_str);
+                $("p.now_playing").attr("title", marquee_elm.text());
             } else {
 
-                var artist = "";
-                var track = "";
+                // var artist = "";
+                // var track = "";
                 //var nowPlayingHtml = "";
 
                 show = data.currentShow[0].name;
                 description = data.currentShow[0].description;
 
+
+        
                 if (show) {
-                    show_elm.html(show);
-                    show_elm.attr("title", show_elm.text());
+                    marquee_str = "On Air now: " + show
+                }else{
+                    marquee_str = "Live from the Studio at Speicher XI"
                 }
 
                 if (description) {
-                    description_elm.html(description);
-                    description_elm.attr("title", description_elm.text());
+                    marquee_str = marquee_str + "  –  " + description
                 }
 
-                if (data.current.type == 'livestream')
-                {
-                    var stream_metadata = "";
-                    if (data.current.name != "") {
-                        stream_metadata = data.current.name;
-                    }
+                console.log(marquee_str)
+                $("p.now_playing").html(marquee_str);
+                $("p.now_playing").attr("title", marquee_elm.text());
 
-                    //nowPlayingHtml += "Live DJ";
-                    //nowPlayingHtml += "<span>" + stream_metadata + "</span>";
-                    title_elm.text("Live DJ");
-                    artist_elm.text(stream_metadata);
-                    title_elm.attr("title", "Live DJ");
-                    artist_elm.attr("title", artist_elm.text());
-                }
-                else if (data.current.type == 'track') {
-                    artist = data.current.metadata.artist_name;
-                    track = data.current.metadata.track_title;
+                // if (data.current.type == 'livestream')
+                // {
+                //     var stream_metadata = "";
+                //     if (data.current.name != "") {
+                //         stream_metadata = data.current.name;
+                //     }
 
-                    //nowPlayingHtml = "";
-                    if (artist) {
-                        //nowPlayingHtml += artist;
-                        artist_elm.html(artist);
-                        artist_elm.attr("title", artist_elm.text());
-                    }
-                    if (track) {
-                        //nowPlayingHtml += "<span>" + track + "</span>";
-                        title_elm.html(track);
-                        title_elm.attr("title", title_elm.text());
-                        song_name = track;
-                    }
-                    //title_elm.attr("title", $.i18n._("Off Air"));
-                    //artist_elm.attr("title", $.i18n._("Offline"));
-                } else if (data.current.type == 'webstream')  {
-                    var webstreamName = "";
-                    var webstreamMetadata = "";
-                    if (data.current.metadata === null) {
-                        webstreamName = data.current.name;
-                    } else {
-                        webstreamName = data.current.metadata.name;
-                        webstreamMetadata = data.current.metadata.live_metadata;
-                    }
-                    //nowPlayingHtml += webstreamName;
-                    //nowPlayingHtml += "<span>" + webstreamMetadata + "</span>";
+                //     //nowPlayingHtml += "Live DJ";
+                //     //nowPlayingHtml += "<span>" + stream_metadata + "</span>";
+                //     title_elm.text("Live DJ");
+                //     artist_elm.text(stream_metadata);
+                //     title_elm.attr("title", "Live DJ");
+                //     artist_elm.attr("title", artist_elm.text());
+                // }
+                // else if (data.current.type == 'track') {
+                //     artist = data.current.metadata.artist_name;
+                //     track = data.current.metadata.track_title;
 
-                    title_elm.html(webstreamName);
-                    title_elm.attr("title", title_elm.text());
-                    artist_elm.html(webstreamMetadata);
-                    artist_elm.attr("title", artist_elm.text());
-                } else {
-                    //nowPlayingHtml += "<span>" + data.current.name + "</span>";
-                    title_elm.text("");
-                    title_elm.attr("title", "");
-                    artist_elm.text(data.current.name);
-                    artist_elm.attr("title", artist_elm.text());
-                }
+                //     //nowPlayingHtml = "";
+                //     if (artist) {
+                //         //nowPlayingHtml += artist;
+                //         artist_elm.html(artist);
+                //         artist_elm.attr("title", artist_elm.text());
+                //     }
+                //     if (track) {
+                //         //nowPlayingHtml += "<span>" + track + "</span>";
+                //         title_elm.html(track);
+                //         title_elm.attr("title", title_elm.text());
+                //         song_name = track;
+                //     }
+                //     //title_elm.attr("title", $.i18n._("Off Air"));
+                //     //artist_elm.attr("title", $.i18n._("Offline"));
+                // } else if (data.current.type == 'webstream')  {
+                //     var webstreamName = "";
+                //     var webstreamMetadata = "";
+                //     if (data.current.metadata === null) {
+                //         webstreamName = data.current.name;
+                //     } else {
+                //         webstreamName = data.current.metadata.name;
+                //         webstreamMetadata = data.current.metadata.live_metadata;
+                //     }
+                //     //nowPlayingHtml += webstreamName;
+                //     //nowPlayingHtml += "<span>" + webstreamMetadata + "</span>";
+
+                //     title_elm.html(webstreamName);
+                //     title_elm.attr("title", title_elm.text());
+                //     artist_elm.html(webstreamMetadata);
+                //     artist_elm.attr("title", artist_elm.text());
+                // } else {
+                //     //nowPlayingHtml += "<span>" + data.current.name + "</span>";
+                //     title_elm.text("");
+                //     title_elm.attr("title", "");
+                //     artist_elm.text(data.current.name);
+                //     artist_elm.attr("title", artist_elm.text());
+                // }
 
                 //title_elm.html(nowPlayingHtml);
 
