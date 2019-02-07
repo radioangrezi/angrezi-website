@@ -64,7 +64,7 @@ $.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(ca
               if (episodeDay !== convertDate(episodeDateUnix)) {
                 episodeDay = convertDate(episodeDateUnix);
 
-                var dayHeader = episode+"<article class='show-item'><span>"+episodeDay+"</span></article>";
+                var dayHeader = episode+"<article class='show-item-date'><h1 class='date'>"+episodeDay+"</h1></article>";
 
                 episode = episode + dayHeader;
 
