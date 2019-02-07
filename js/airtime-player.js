@@ -403,7 +403,6 @@ function attachStreamMetadataToPlayer(){
                     marquee_str = marquee_str + "  –  " + description
                 }
 
-                console.log(marquee_str)
                 $("p.now_playing").html(marquee_str);
                 $("p.now_playing").attr("title", marquee_elm.text());
 

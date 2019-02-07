@@ -240,9 +240,6 @@ text-transform: uppercase;
         justify-content: center;
     }
 
-    .marquee-wrapper {
-        display: flex;
-    }
 }
 
 article {
