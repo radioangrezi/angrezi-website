@@ -87,10 +87,11 @@ $.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(ca
       if(episodeCounter < 1){
         episode = "<article class='show-item'><p class='show-date'></p>" +
               "<div class='headlines'>" +
-              "<h1 class='show-time'>" +
-              "<h1 class='show-title'>Offline</h1>" +
+              "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
+              "<h1 class='show-time'>OFFLINE</h1>" +
+              "<h1 class='show-title'>We are on holidays. Bye!</h1>" +
               "</div>"+
-              "<p itemprop='description'>We are on holidays. Bye.</p>"+ 
+              "<p itemprop='description'>"+ 
               "</article>"
       }
       //$('.calendar__data').append('<div class="row"><div class="xs-10 xs-offset-2"><h2>Live Schedule</h2></div></div>');
@@ -99,8 +100,8 @@ $.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(ca
       // failed to load
       fail = "<article class='show-item'><p class='show-date'></p>" +
               "<div class='headlines'>" +
-              "<h1 class='show-time'>" +
-              "<h1 class='show-title'>Sorry</h1>" +
+              "<h1 class='show-time'>Sorry</h1>" +
+              "<h1 class='show-title'>" +
               "</div>"+
               "<p itemprop='description'>There seems to be a temporary issue connecting to the Studio. Damn.</p>"+ 
               "</article>"
