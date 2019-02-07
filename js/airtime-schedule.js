@@ -61,7 +61,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
 
                 var dayIsLiveLichtenberg = episode + "<div class='row calendar__date calendar__date--live'><div class='xs-10 xs-offset-2'>" + episodeDay +"<br/><span style='font-style: italic;'>Live from Lichtenberg</span></div></div>";
                 var dayIsLiveArkaoda = episode + "<div class='row calendar__date calendar__date--live'><div class='xs-10 xs-offset-2'>" + episodeDay +"<br/><span style='font-style: italic;'>Live from Arkaoda</span></div></div>";
-                var dayIsNotLive = episode+"<div class='row calendar__date'><div class='xs-10 xs-offset-2'><span>"+episodeDay+"</span></div></div>";
+                 var dayIsNotLive = episode+"<div class='row calendar__date'><div class='xs-10 xs-offset-2'><span>"+episodeDay+"</span></div></div>";
 
 
                 if (typeof liveDays !== 'undefined') {

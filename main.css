@@ -232,12 +232,17 @@ main {
 
     nav ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .marquee-wrapper {
         display: flex;
     }
+    
+    .show-item-date {
+        grid-column: 1/4;
+}
+    
 }
 
 article {
@@ -259,12 +264,36 @@ article > img {
 
 
 .show-time {
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
     font-weight: bold;
       transform: rotate(-25deg);
 
 }
+
+
+.show-item-date {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    padding: 1.8rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: inherit;
+    justify-content: center;
+}
+
+
+
+
+.date {
+    
+    font-size: 3em;
+    font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
+    font-weight: bold;
+    transform: rotate(25deg);
+    }
+    
 
 .show-title {
     
