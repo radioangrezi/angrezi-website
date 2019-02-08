@@ -59,6 +59,71 @@ main {
 
 }
 
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  border: 1px solid black;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+    
+  padding: 1rem;
+
+  color: black;
+  background: #ff8549;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: blue;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+
+  transition: max-height .25s ease-in-out;
+}
+
+.collapsible-content .content-inner {
+  
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 200vh;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
 .shoutbox-section {
     grid-area: shoutbox;
     
@@ -69,8 +134,6 @@ main {
         padding: 1.5rem;
     background-color: inherit;
     background-color: white;
-        height: 80vh;
-        overflow: auto;
     border: 0 0 0 1px solid black;
 }
 
@@ -110,18 +173,22 @@ font-family: 'Archivo Narrow', sans-serif;
         display:none;
     }
 
-#ys-input-nickname {
+#ys-history-link {
+    display: none;
 }
 
-form {
-        border: 1px solid black;
-
+form {  
+    margin-top: 1rem;  
+    padding: 0;
+    
 }
+
 fieldset {
     margin: 0;
-    padding: 0;
-    border: 1px solid black;
-
+    padding: 0.5rem;;
+    background-color: none;
+    display: flex;
+    border: none;
     
 }
 
@@ -136,34 +203,32 @@ input {
 
 input[type=text], select {
   width: 100%;
-  padding: 12px 20px;
+  padding: 0.9rem;
   margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
+    border: 1px solid gray;
   border-radius: 15rem;
   box-sizing: border-box;
 }
 
 input[type=submit] {
   width: 100%;
-  background-color: #00e04c;
+  background-color: #188bfe;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 0.9rem;
+  margin-top: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 15rem;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #00c242;
+  background-color: #1763fc;
 }
 
 
-.divv {
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+
+
+
 
 .site-footer {
     padding: 2rem;
@@ -187,7 +252,7 @@ box-sizing: border-box;
 color: black;
 font-family: 'terminal_grotesque';
 border-bottom: 1px solid black;
-font-size: 0.9rem;
+font-size: 1.5rem;
 text-transform: uppercase;
 }
 .marquee p {
@@ -202,9 +267,9 @@ text-transform: uppercase;
  -webkit-transform:translateX(100%);
  transform:translateX(100%);
  /* Apply animation to this element */
- -moz-animation: scroll-left 10s linear infinite;
- -webkit-animation: scroll-left 10s linear infinite;
- animation: scroll-left 10s linear infinite;
+ -moz-animation: scroll-left 20s linear infinite;
+ -webkit-animation: scroll-left 20s linear infinite;
+ animation: scroll-left 20s linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
@@ -246,8 +311,7 @@ text-transform: uppercase;
 .logo-link {
     width: 300px;
     height: 60px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 0;
     border: 1px solid black;
     box-shadow: 5px 5px;
     box-sizing: border-box;
@@ -262,7 +326,7 @@ text-transform: uppercase;
 }
 
 #radio-logo {
-    width: 130px;
+    width: 16rem;
 }
 
 #play {

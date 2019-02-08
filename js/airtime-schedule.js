@@ -10,13 +10,13 @@ function convertDate(timestamp) {
   return dateFormatted;
 }
 
- var timeNow = Date.now()/1000 - 86400;
+ var timeNow = Date.now()/1000;// - 86400;
 
 $(document).ready(function() {
 $.ajaxSetup({
   timeout: 5000,
 });
-$.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(calendarProgram){
+$.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(calendarProgram){
       var episode = "", episodeDay=false;
       var episodeCounter = 0;
       for(var x in calendarProgram) {
@@ -85,26 +85,25 @@ $.getJSON("http://sourcefabric.airtime.pro/api/week-info?callback=?",function(ca
         }
       }
       if(episodeCounter < 1){
-        episode = "<article class='show-item'><p class='show-date'></p>" +
-              "<div class='headlines'>" +
-              "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
-              "<h1 class='show-time'>OFFLINE</h1>" +
-              "<h1 class='show-title'>We are on holidays. Bye!</h1>" +
-              "</div>"+
-              "<p itemprop='description'>"+ 
-              "</article>"
+        episode = "<article class='show-item'>" +
+            "<div class='headlines'>" +
+            "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
+            "<h1 class='show-time'>OFFLINE</h1>" +
+            "<h1 class='show-title'>We are on holidays. Bye.</h1>" +
+            "</div>" +
+            "</article>"
       }
       //$('.calendar__data').append('<div class="row"><div class="xs-10 xs-offset-2"><h2>Live Schedule</h2></div></div>');
       $('.show-section').append(episode);
     }).fail(function(){
       // failed to load
-      fail = "<article class='show-item'><p class='show-date'></p>" +
-              "<div class='headlines'>" +
-              "<h1 class='show-time'>Sorry</h1>" +
-              "<h1 class='show-title'>" +
-              "</div>"+
-              "<p itemprop='description'>There seems to be a temporary issue connecting to the Studio. Damn.</p>"+ 
-              "</article>"
+      fail = "<article class='show-item'>" +
+            "<div class='headlines'>" +
+            "<img class='pixel' src='Images/MrPixel-tear.svg'>" +
+            "<h1 class='show-time'>SORRY</h1>" +
+            "<h1 class='show-title'>There seems to be a temporary issue connecting to the studio. Damn!</h1>" +
+            "</div>" +
+            "</article>"
       $('.show-section').append(fail);
     });
 });

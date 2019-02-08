@@ -357,7 +357,7 @@ var metadataTimer = null;
 //
 // The metadata is fetched when the current track is about to end.
 function attachStreamMetadataToPlayer(){
-    $.ajax({url: "http://sourcefabric.airtime.pro/api/live-info",
+    $.ajax({url: "http://stream.radioangrezi.de/api/live-info",
         data: {type:"interval",limit:"5"},
         dataType: "jsonp",
         success: function(data) {
@@ -368,7 +368,7 @@ function attachStreamMetadataToPlayer(){
             var description_elm = $(".now_playing .show_description");
             var marquee_elm = $(".now_playing .marquee");
             var str_off_air = "Off Air";
-            var str_offline = "Offline";
+            var str_offline = "Offline or maybe not";
             var marquee_str = ""
             if (data.current === null) {
                 //title_elm.attr("title", $.i18n._("Off Air"));
