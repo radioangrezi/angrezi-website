@@ -63,6 +63,8 @@ main {
     grid-area: main;
     /*margin-top: -20px;*/
     outline: 1px solid black;
+    overflow-wrap: break-word;
+
 
 }
 
