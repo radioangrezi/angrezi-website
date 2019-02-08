@@ -143,11 +143,11 @@ input[type='checkbox'] {
     background-color: white;
     outline: 1px solid black;
 }
-
+/*
 .shoutbox-interface {
     padding: 1.5rem;
     outline: 1px solid black;
-}
+}*/
 
 .ys-post {
     color: white;
@@ -194,13 +194,13 @@ fieldset {
     margin: 0;
     padding: 0.5rem;;
     background-color: none;
-    display: flex;
+    display: block;
     border: none;
     
 }
 
 .form-wrapper {
-    display: flex;
+   /* display: flex;*/
 }
 
 
@@ -514,6 +514,7 @@ holidays: {
     font-size: 2em;
     font-family: 'VG5000', Arial;
     line-height: 1;
+overflow-wrap: break-word;
 }
 
 .show-host {
