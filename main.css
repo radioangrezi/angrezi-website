@@ -132,6 +132,22 @@ input[type='checkbox'] {
   border-bottom-left-radius: 0;
 }
 
+/* START shoutbox iframe hack*/
+
+iframe {
+    outline: 0;
+    border: 0;
+}
+
+.shoutbox-wrapper {
+    /*padding: 1.5rem;
+    background-color: inherit;
+    background-color: white;
+    outline: 1px solid black;*/
+}
+
+/* END */
+
 
 .shoutbox-section {
     grid-area: shoutbox;
@@ -139,12 +155,6 @@ input[type='checkbox'] {
     outline: 1px solid black;
 }
 
-.shoutbox-wrapper {
-        padding: 1.5rem;
-    background-color: inherit;
-    background-color: white;
-    outline: 1px solid black;
-}
 /*
 .shoutbox-interface {
     padding: 1.5rem;
@@ -217,6 +227,7 @@ input[type=text], select {
     border: 1px solid gray;
   border-radius: 15rem;
   box-sizing: border-box;
+  outline: 0;
 }
 
 input[type=submit] {
@@ -228,6 +239,7 @@ input[type=submit] {
   border: none;
   border-radius: 15rem;
   cursor: pointer;
+  outline: 0;
 }
 
 input[type=submit]:hover {

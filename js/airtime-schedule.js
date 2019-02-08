@@ -64,15 +64,13 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               if (episodeDay !== convertDate(episodeDateUnix)) {
                 episodeDay = convertDate(episodeDateUnix);
 
-                var dayHeader = episode+"<article class='show-item-date'><h1 class='date'>"+episodeDay+"</h1></article>";
-
-                episode = episode + dayHeader;
+              $('.show-section').append("<article class='show-item-date'><h1 class='date'>"+episodeDay+"</h1></article>");
 
               }
               //episode = episode+"<div class='row calendar__show"+currentEpisode+"' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><div class='xs-2' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</div><div class='xs-10' itemprop='name'>"+episodeName+"</div><div class='xs-10' itemprop='description'>"+episodeDescription+"</div></div><br/>";
 
               episodeCounter++;
-              episode = episode+"<article class='show-item' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><p class='show-date'></p>" +
+              episode = "<article class='show-item' itemprop='episode' itemscope itemtype='https://schema.org/RadioEpisode'><p class='show-date'></p>" +
               "<p class='show-date'>"+episodeDay+"</p>" +
               "<div class='headlines'>" +
               "<h1 class='show-time' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</h1>" +
@@ -80,6 +78,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               "</div>"+
               "<p itemprop='description'>"+episodeDescription+"</p>"+ 
               "</article>"
+              $('.show-section').append(episode);
             }
           }
         }
@@ -92,9 +91,10 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
             "<h1 class='show-title'>We are on holidays. Bye.</h1>" +
             "</div>" +
             "</article>"
+        $('.show-section').append(episode);
       }
       //$('.calendar__data').append('<div class="row"><div class="xs-10 xs-offset-2"><h2>Live Schedule</h2></div></div>');
-      $('.show-section').append(episode);
+      //$('.show-section').append(episode);
     }).fail(function(){
       // failed to load
       fail = "<article class='show-item'>" +
