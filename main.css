@@ -15,7 +15,7 @@ p {
 
 body {
     padding: 2rem;
-    background-color: #ff8549;
+    background-color: #ffff00;
 }
 
 .wrapper {
@@ -38,7 +38,7 @@ address {
 
 .main-head {
     grid-area: header;
-    background-color: #ff8549;
+    background-color: #ffff00;
     border: 1px solid black;
     z-index: 1;
 }
@@ -65,7 +65,7 @@ input[type='checkbox'] {
 
 .lbl-toggle {
   display: block;
-  border: 1px solid black;
+  /*border-bottom: 1px solid black;*/
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 2rem;
   text-align: center;
@@ -73,7 +73,7 @@ input[type='checkbox'] {
   padding: 1rem;
 
   color: black;
-  background: #ff8549;
+  background: #ffff00;
 
   cursor: pointer;
 
@@ -464,7 +464,7 @@ article > img {
     font-size: 3em;
     font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
     font-weight: bold;
-      transform: rotate(-25deg);
+      transform: rotate(-20deg);
 
 }
 
@@ -491,7 +491,7 @@ holidays: {
     font-size: 1.5rem;
     font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
     font-weight: bold;
-    transform: rotate(25deg);
+    transform: rotate(10deg);
     }
 
 
