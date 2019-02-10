@@ -87,8 +87,8 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
         episode = "<article class='show-item'>" +
             "<div class='headlines'>" +
             "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
-            "<h1 class='show-time'>OFFLINE</h1>" +
-            "<h1 class='show-title'>We are on holidays. Bye.</h1>" +
+            "<h1 class='show-time'>CIAO!</h1>" +
+            "<h1 class='show-title'>We are on holidays.</h1>" +
             "</div>" +
             "</article>"
         $('.show-section').append(episode);
@@ -100,7 +100,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
       fail = "<article class='show-item'>" +
             "<div class='headlines'>" +
             "<img class='pixel' src='Images/MrPixel-tear.svg'>" +
-            "<h1 class='show-time'>SORRY</h1>" +
+            "<h1 class='show-time'>UUPZZ</h1>" +
             "<h1 class='show-title'>There seems to be a temporary issue connecting to the studio. Damn!</h1>" +
             "</div>" +
             "</article>"
