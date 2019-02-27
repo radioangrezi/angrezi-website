@@ -88,7 +88,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
             "<div class='headlines'>" +
             "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
             "<h1 class='show-time'>CIAO!</h1>" +
-            "<h1 class='show-title'>We are on holidays.</h1>" +
+            "<h1 class='show-title'>Hear you next week.</h1>" +
             "</div>" +
             "</article>"
         $('.show-section').append(episode);
