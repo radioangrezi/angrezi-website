@@ -436,6 +436,11 @@ font-family: 'Archivo Narrow', sans-serif;
     /*display: flex;
     justify-content: center;*/
 }
+@media (max-width: 400px) {
+    body {
+        padding: 0;
+    }
+}    
 @media (min-width: 1000px) {
     /*.wrapper {
     grid-template-columns: 1fr 3fr;
@@ -461,7 +466,7 @@ font-family: 'Archivo Narrow', sans-serif;
 
     .show-item-date {
         /*grid-column: 1/4;*/
-}
+    }
 }
 
 article {
