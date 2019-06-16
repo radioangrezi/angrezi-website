@@ -49,6 +49,13 @@ address {
     z-index: 1;
 }
 
+a, a:hover, a:visited, a:active {
+    color: black;
+}
+
+.inverted a, .inverted a:hover, .inverted a:visited, .inverted a:active {
+    color: #ffff00;
+}
 
 
 main {
@@ -57,7 +64,12 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         /*grid-gap: 2rem;*/
+        outline: 1px solid black;
+        font-family: 'Sporting Grotesque_Regular';
     }
+main p.main-padding {
+    padding: 2rem;
+}
 
 .show-section {
     grid-area: main;
@@ -269,7 +281,7 @@ font-family: 'terminal_grotesque';
 border-bottom: 1px solid black;
 font-size: 1.5rem;
 text-transform: uppercase;
- height: 30px;
+ /*height: 30px;*/
 }
 .marquee {
  height: 30px;

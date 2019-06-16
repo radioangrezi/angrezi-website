@@ -368,7 +368,7 @@ function attachStreamMetadataToPlayer(){
             var description_elm = $(".now_playing .show_description");
             var marquee_elm = $(".now_playing .marquee");
             var str_off_air = "Off Air";
-            var str_offline = "Offline or maybe not";
+            var str_offline = "Offline or maybe not – <a href=\"https://t.me/radioangrezi\">Notification when on air?</a>";
             var marquee_str = ""
             if (data.current === null) {
                 //title_elm.attr("title", $.i18n._("Off Air"));
