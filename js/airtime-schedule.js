@@ -87,8 +87,8 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
         episode = "<article class='show-item'>" +
             "<div class='headlines'>" +
             "<img class='pixel' src='Images/MrPixel-moon.svg'>" +
-            "<h1 class='show-time'>SENDEPAUSE</h1>" +
-            "<h1 class='show-title'>Angrezi is on holiday break. You should take be as well!<br/>We will be back soon. Subscribe to <a href=\"https://t.me/radioangrezi\">Angrezi's Telegram channel</a> to get a notification, when we are back.</h1>" +
+            "<h1 class='show-time'>SENDE-<br/>PAUSE</h1>" +
+            "<h1 class='show-title'>Angrezi is on holiday break. You should take one as well!<br/>Subscribe to <a href=\"https://t.me/radioangrezi\">Angrezi's Telegram channel</a> to get a notification when we are back.</h1>" +
             "</div>" +
             "</article>"
         $('.show-section').append(episode);
