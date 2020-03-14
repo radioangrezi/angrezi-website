@@ -6,6 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Radio Angrezi</title>
 
+    <!-- Since we can currently not support HTTPS on the streaming server, we have to redirect to HTTP always -->
+    <script type="text/javascript">
+        if (window.location.protocol == "https:") {
+           location.protocol = "http:";
+        }
+    </script>
+
     <link rel="stylesheet" href="main.css">
     
     <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
