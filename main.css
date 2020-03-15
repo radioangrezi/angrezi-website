@@ -173,7 +173,7 @@ iframe {
     outline: 1px solid black;
 }*/
 
-.ys-post {
+.ys-post-post {
     color: white;
     background-color: #00e04c;
     margin-bottom: 0.8rem;
@@ -183,6 +183,13 @@ iframe {
     padding: 0.5rem;
 font-family: 'Archivo Narrow', sans-serif;
     
+}
+
+.ys-post-date {
+  font-family: 'Archivo Narrow', sans-serif;
+  text-align: center;
+  line-height: 2em;
+  
 }
 
 .ys-post-info {
