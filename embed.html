@@ -1,19 +1,33 @@
 <html>
 <head>
 	<title>Radio Angrezi</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- Since we can currently not support HTTPS on the streaming server, we have to redirect to HTTP always -->	
+    <script type="text/javascript">
+        if (window.location.protocol == "https:") {
+           location.protocol = "http:";
+        }
+    </script>
 	<style>
+	body, html {
+		width: 100vw;
+		margin: 0;
+		padding: 0;
+	}
 	body
 	{
-		margin: 10px;
-		max-width: 800px;
-		width: 90 vw;
+		min-width: 200px;
 		font-family: Helvetica;
 		background-color: #ffff00;
+	   	padding: 10px;
+	   	width: 100%;
+    	box-sizing: border-box;
 	}
 	.table { 
 	   display: table;
 	   border-spacing: 0.5em;
 	   border-collapse: collapse;
+	   width: 100%;
 	}
 	.table-row {display: table-row; }
 	.table-row > div {
@@ -107,79 +121,79 @@
 
 	@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
 
-@font-face {
-    font-family: 'Sporting Grotesque_Regular';
-    src: url('fonts/Sporting_Grotesque-Regular_web.eot');
-    src: url('fonts/Sporting_Grotesque-Regular_web.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Sporting_Grotesque-Regular_web.woff') format('woff'),
-        url('fonts/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
-        url('fonts/Sporting_Grotesque-Regular_web.ttf') format('truetype'),
-        url('fonts/Sporting_Grotesque-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+	@font-face {
+	    font-family: 'Sporting Grotesque_Regular';
+	    src: url('fonts/Sporting_Grotesque-Regular_web.eot');
+	    src: url('fonts/Sporting_Grotesque-Regular_web.eot?#iefix') format('embedded-opentype'),
+	        url('fonts/Sporting_Grotesque-Regular_web.woff') format('woff'),
+	        url('fonts/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
+	        url('fonts/Sporting_Grotesque-Regular_web.ttf') format('truetype'),
+	        url('fonts/Sporting_Grotesque-Regular_web.svg#svgFontName') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
-@font-face {
-    font-family: 'Sporting Grotesque_Bold';
-    src:    url('fonts/Sporting_Grotesque-Bold_web.eot');
-    src:    url('fonts/Sporting_Grotesque-Bold_web.eot?#iefix') format('embedded-opentype'),
-            url('fonts/Sporting_Grotesque-Bold_web.woff') format('woff'),
-            url('fonts/Sporting_Grotesque-Bold_web.woff2') format('woff2'),
-            url('fonts/Sporting_Grotesque-Bold_web.ttf') format('truetype'),
-            url('fonts/Sporting_Grotesque-Bold_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+	@font-face {
+	    font-family: 'Sporting Grotesque_Bold';
+	    src:    url('fonts/Sporting_Grotesque-Bold_web.eot');
+	    src:    url('fonts/Sporting_Grotesque-Bold_web.eot?#iefix') format('embedded-opentype'),
+	            url('fonts/Sporting_Grotesque-Bold_web.woff') format('woff'),
+	            url('fonts/Sporting_Grotesque-Bold_web.woff2') format('woff2'),
+	            url('fonts/Sporting_Grotesque-Bold_web.ttf') format('truetype'),
+	            url('fonts/Sporting_Grotesque-Bold_web.svg#svgFontName') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
 
-@font-face {
-    font-family: 'savateregular';
-    src: url('fonts/savate-regular-webfont.eot');
-    src: url('fonts/savate-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/savate-regular-webfont.woff2') format('woff2'),
-        url('fonts/savate-regular-webfont.woff') format('woff'),
-        url('fonts/savate-regular-webfont.ttf') format('truetype'),
-        url('fonts/savate-regular-webfont.svg#savateregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+	@font-face {
+	    font-family: 'savateregular';
+	    src: url('fonts/savate-regular-webfont.eot');
+	    src: url('fonts/savate-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	        url('fonts/savate-regular-webfont.woff2') format('woff2'),
+	        url('fonts/savate-regular-webfont.woff') format('woff'),
+	        url('fonts/savate-regular-webfont.ttf') format('truetype'),
+	        url('fonts/savate-regular-webfont.svg#savateregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
-@font-face {
-    font-family: 'VG5000';
-    src: url('fonts/VG5000-Regular_web.eot');
-    src: url('fonts/VG5000-Regular_web.eot?#iefix') format('embedded-opentype'),
-        url('fonts/VG5000-Regular_web.woff') format('woff'),
-        url('fonts/VG5000-Regular_web.woff2') format('woff2'),
-        url('fonts/VG5000-Regular_web.ttf') format('truetype'),
-        url('fonts/VG5000-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+	@font-face {
+	    font-family: 'VG5000';
+	    src: url('fonts/VG5000-Regular_web.eot');
+	    src: url('fonts/VG5000-Regular_web.eot?#iefix') format('embedded-opentype'),
+	        url('fonts/VG5000-Regular_web.woff') format('woff'),
+	        url('fonts/VG5000-Regular_web.woff2') format('woff2'),
+	        url('fonts/VG5000-Regular_web.ttf') format('truetype'),
+	        url('fonts/VG5000-Regular_web.svg#svgFontName') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+	}
 
-@font-face {
-    font-family: 'Millimetre';
-    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot');
-    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff') format('woff'),
-        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff2') format('woff2'),
-        url('fonts/Millimetre/Bold/Millimetre-Bold_web.ttf') format('truetype'),
-        url('fonts/Millimetre/Bold/Millimetre-Bold_web.svg#svgFontName') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
+	@font-face {
+	    font-family: 'Millimetre';
+	    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot');
+	    src: url('fonts/Millimetre/Bold/Millimetre-Bold_web.eot?#iefix') format('embedded-opentype'),
+	        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff') format('woff'),
+	        url('fonts/Millimetre/Bold/Millimetre-Bold_web.woff2') format('woff2'),
+	        url('fonts/Millimetre/Bold/Millimetre-Bold_web.ttf') format('truetype'),
+	        url('fonts/Millimetre/Bold/Millimetre-Bold_web.svg#svgFontName') format('svg');
+	    font-weight: bold;
+	    font-style: normal;
+	}
 
-@font-face {
-    font-family: 'terminal_grotesque';
-    src: url('fonts/terminal-grotesque-webfont.eot');
-    src: url('fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-        url('fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-        url('fonts/terminal-grotesque-webfont.woff') format('woff'),
-        url('fonts/terminal-grotesque-webfont.ttf') format('truetype'),
-        url('fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	@font-face {
+	    font-family: 'terminal_grotesque';
+	    src: url('fonts/terminal-grotesque-webfont.eot');
+	    src: url('fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+	        url('fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+	        url('fonts/terminal-grotesque-webfont.woff') format('woff'),
+	        url('fonts/terminal-grotesque-webfont.ttf') format('truetype'),
+	        url('fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
 
-}
+	}
 	</style>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
@@ -225,7 +239,8 @@
     <script type="text/javascript" src="node_modules/moment/moment.js"></script>
     <script type="text/javascript" src="js/airtime-player.js"></script>
 </head>
-<body class="table">
+<body>
+	<div class="table">
     <div id="container" class="table-row">
 		<div id="player" onclick="toggle()" preload="none">
 			<audio id="audio-player">
@@ -264,7 +279,8 @@
                     <p class="now_playing">LIVE FROM OUTNOW 16:00 – 23:00</p>
             </div>
         </div>
-    </div><!-- / Container-->
+    </div>
+	</div>
 </body>
 </html>
 </html>
