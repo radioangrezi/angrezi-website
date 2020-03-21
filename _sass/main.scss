@@ -225,12 +225,16 @@ a:hover, a:active {
 
 .page main {
   grid-template-columns: none;
-  padding: 2rem;
+  padding: 2rem 0;
+  word-break: break-word;
+
+  & > * {
+    padding: 0 2rem;
+  }
 
   strong {
-    letter-spacing: 0.5em;
-    margin: 0 1em;
-
+    background: black;
+    color: yellow;
   }
 }
 
