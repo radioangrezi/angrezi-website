@@ -1,0 +1,20 @@
+<!doctype html>
+<html dir="ltr" lang="en-us">
+<head>
+    {% include html_head.html %}
+</head>
+
+<body class="page">
+    <div class="wrapper">
+        <header class="main-head">
+            {% include marquee.html %}
+            {% include navigation.html %}
+        </header>
+
+        <main><h1>{{ page.title }}</h1></main>
+        <main>{{ content }}</main>
+        
+    </div>
+
+</body>
+</html>
