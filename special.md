@@ -13,7 +13,7 @@ Als experimenteller Radiosender, Kollektiv und Netzwerk wollen wir das Medium nu
 
 Wir laden Musiker:innen, Künstler:innen, Aktivisti, DJs und Interessierte ein im Rahmen dieses **Call for Participation** mitzumachen. Menschen können (voraufgezeichnete) Sendungen beitragen bzw. Live-Sendungen aus ihrer Location bzw. von Daheim beitragen. Gerne können im Rahmen dieser Aktion gemeinsame Soli-Aktionen oder Hilfsangebote unterstützt werden. Vorläufig angedacht sind Sendungen im Webstream **abends um 19:00**. Ggf. ist auch eine Übertragung zu anderen Zeiten per Analogradio (92,5 FM) möglich. 
 
-Grundsätzlich sind Livesendungen von allen Standorten mit einem guten Internetanschluss möglich. Ein persönlicher Kontakt ist grundsätzlich nicht notwendig. Dafür wird i.d.R. mindestens ein Computer und eine externe Soundkarte benötigt. (Je nach Aufbau ggf. ein Mixer, Plattenspieler, Mikrofone etc.) Zusätzlich sind ggf. Call-Ins (Publikumsanrufe) oder virtuelle Diskussionsrunden möglich. Wir haben in den letzten Tagen alles nötige für diese Art von Produktionen außerhalb des Studios vorbereitet.
+Grundsätzlich sind Livesendungen von allen Standorten mit einem guten Internetanschluss möglich. Ein persönlicher Kontakt ist grundsätzlich nicht notwendig. Dafür wird i.d.R. mindestens ein Computer und eine externe Soundkarte benötigt. (Je nach Aufbau ggf. ein Mixer, Plattenspieler, Mikrofone etc.) Zusätzlich sind Call-Ins (Publikumsanrufe), virtuelle Diskussionsrunden, Konzerte, DJ-Sets etc. möglich. Wir haben in den letzten Tagen alles nötige für diese Art von Produktionen außerhalb des Studios vorbereitet.
 
 Vorproduzierte Sendungen können einfach per E-Mail geschickt werden, und nach Plenumsrücksprache ins Programm aufgenommen werden. 
 
