@@ -3,7 +3,41 @@ layout: page
 title: Special Programme + Call for Participation
 ---
 
-<small>2020-03-21</small>
+<a id="de"></a>
+<a href="#en">GERMAN BELOW</a>
+
+
+<small>2020-03-23</small>
+
+Dear Angrezi family, befriended artists and musicians, and activists in bremen, 
+
+The current situation is challenging all of us with unseen consequences. A few are facing existential threads, people in the arts and culture and collectives have to deal with unexpected economic difficulties. 
+
+Being an experimental radio station, collective and network, we want to use the medium to create connections in different ways. In the upcoming days and weeks an improvised program will be put into existence. 
+
+We invite musicians, artists, activists, djs and prospects of any kind, to join this **call for participation**.  You are welcome to contribute (prerecorded) shows and live-shows right out of your bedroom. You are open to promote collective actions of solidarity, fundings in any way within this context. We prescheduled shows on our webstream **every evening at 19:00**, possibly also broadcasting at different times on analog radio (fm 92,5).  
+
+Generally, liveshows are feasible at all locations providing a solid internet connection, a personal contact with us generally is not needed. A minimal streaming setup requires a computer and an audio interface (depending on the setup also mixers, turntables, microphones). Additionally, audience call-ins, discourse platforms, concerts, dj-sets are possible. During the last few days we extended our infrastructure to meet production requirements of this kind. 
+
+Preproduces shows can be sent to us via mail and will be included into the program after being discussed in the plenum. 
+
+We added an [easy and thorough guide to live-streaming](https://radioangrezi.gitbook.io/studio/step-by-step-guide) to our Wiki. If the above hardware is available to you (or can be rented), setup and testing usually takes 30 to 60 minutes.  
+
+If you have questions or suggestions write us at [radioangrezi@hfk-bremen.de](mailto:radioangrezi@hfk-bremen.de) 
+
+We hope to contribute towards a collectiveness of solidarity creating a (virtual) space of encountering, distant from current massmedia hysteria. 
+
+💌 
+
+ANGREZI
+
+<br/><br/>
+
+<a id="en"></a>
+<a href="#de">ENGLISH OBEN</a>
+
+
+<small>2020-03-23</small>
 
 Liebe Angrezi Familie, liebe befreundete Künstler:innen, Musiker:innen und Aktive in Bremen, 
 
@@ -17,7 +51,7 @@ Grundsätzlich sind Livesendungen von allen Standorten mit einem guten Interneta
 
 Vorproduzierte Sendungen können einfach per E-Mail geschickt werden, und nach Plenumsrücksprache ins Programm aufgenommen werden. 
 
-Eine [übersichtliche Anleitung](https://radioangrezi.gitbook.io/studio/remote#direct-one-way-streaming-to-show-source) zum Livestreamen findest Du in unserem Wiki. Wenn die Technik bei Dir vor Ort verfügbar ist (oder geliehen werden kann) dauert ein Aufbau und Test i.d.R. nicht länger als 30-60 Minuten. 
+Eine [übersichtliche Step-by-Step Anleitung](https://radioangrezi.gitbook.io/studio/step-by-step-guide) zum Livestreamen findest Du in unserem Wiki. Wenn die Technik bei Dir vor Ort verfügbar ist (oder geliehen werden kann) dauert ein Aufbau und Test i.d.R. nicht länger als 30-60 Minuten. 
 
 Du kannst Fragen und Vorschläge ans Plenum per E-Mail an [radioangrezi@hfk-bremen.de](mailto:radioangrezi@hfk-bremen.de) schicken.
 
