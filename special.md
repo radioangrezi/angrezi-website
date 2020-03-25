@@ -21,7 +21,7 @@ Generally, liveshows are feasible at all locations providing a solid internet co
 
 Preproduces shows can be sent to us via mail and will be included into the program after being discussed in the plenum. 
 
-We added an [easy and thorough guide to live-streaming](https://radioangrezi.gitbook.io/studio/step-by-step-guide) to our Wiki. If the above hardware is available to you (or can be rented), setup and testing usually takes 30 to 60 minutes.  
+We added an [easy and thorough guide to live-streaming](https://docs.radioangrezi.de/step-by-step-guide) to our Wiki. If the above hardware is available to you (or can be rented), setup and testing usually takes 30 to 60 minutes.  
 
 If you have questions or suggestions write us at [radioangrezi@hfk-bremen.de](mailto:radioangrezi@hfk-bremen.de) 
 
@@ -51,7 +51,7 @@ Grundsätzlich sind Livesendungen von allen Standorten mit einem guten Interneta
 
 Vorproduzierte Sendungen können einfach per E-Mail geschickt werden, und nach Plenumsrücksprache ins Programm aufgenommen werden. 
 
-Eine [übersichtliche Step-by-Step Anleitung](https://radioangrezi.gitbook.io/studio/step-by-step-guide) zum Livestreamen findest Du in unserem Wiki. Wenn die Technik bei Dir vor Ort verfügbar ist (oder geliehen werden kann) dauert ein Aufbau und Test i.d.R. nicht länger als 30-60 Minuten. 
+Eine [übersichtliche Step-by-Step Anleitung](https://docs.radioangrezi.de/step-by-step-guide) zum Livestreamen findest Du in unserem Wiki. Wenn die Technik bei Dir vor Ort verfügbar ist (oder geliehen werden kann) dauert ein Aufbau und Test i.d.R. nicht länger als 30-60 Minuten. 
 
 Du kannst Fragen und Vorschläge ans Plenum per E-Mail an [radioangrezi@hfk-bremen.de](mailto:radioangrezi@hfk-bremen.de) schicken.
 
