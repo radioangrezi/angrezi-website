@@ -81,7 +81,7 @@ a, a:visited {
 }
 
 a:hover, a:active {
-  color: blue;
+  color: #0000ff;
 }
 
 .inverted a, .inverted a:hover, .inverted a:visited, .inverted a:active {
@@ -278,7 +278,7 @@ main {
 }
 
 .lbl-toggle:hover {
-  color: blue;
+  color: #0000ff;
 }
 
 .lbl-toggle::before {
@@ -538,8 +538,8 @@ input[type=submit]:hover {
 }
 
 .logo-link:hover {
-  color: blue;
-   /*fill: blue;*/
+  color: #0000ff;
+   /*fill: #0000ff;*/
  }
 
  .logo-link:active {
@@ -569,7 +569,7 @@ input[type=submit]:hover {
   }
 
   #play:hover {
-    color: blue;
+    color: #0000ff;
   }
 
   #play:active {
@@ -577,7 +577,7 @@ input[type=submit]:hover {
   }
 
   #pause:hover {
-    color: blue;
+    color: #0000ff;
   }
 
   #pause:active {
@@ -597,7 +597,7 @@ input[type=submit]:hover {
   }
 
   #call:hover {
-    color: blue;
+    color: #0000ff;
   }
 
   #call:active {
@@ -618,7 +618,7 @@ input[type=submit]:hover {
   }
 
   #chat:hover {
-    color: blue;
+    color: #0000ff;
   }
 
   #chat:active {
