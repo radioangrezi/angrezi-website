@@ -76,7 +76,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               "<h1 class='show-time' itemprop='publication' itemscope itemtype='https://schema.org/BroadcastEvent'><meta itemprop='startDate' content='"+episodeDateISO+"'><meta itemprop='endDate' content='"+episodeDateEndISO+"'>"+episodeTime+"</h1>" +
               "<h1 class='show-title' itemprop='name'>"+episodeName+"</h1>" +
               "</div>"+
-              "<p itemprop='description'>"+episodeDescription+"</p>"+ 
+              "<p itemprop='description' class='show-description'>"+episodeDescription+"</p>"+ 
               "</article>"
               $('.show-section').append(episode);
             }
