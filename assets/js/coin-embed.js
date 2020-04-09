@@ -1,0 +1,73 @@
+(() => {
+  const style = (size, position) => {
+    if (!(typeof size === "string"))
+      throw new Error("size must be css string literal");
+    const defaultSize = size || "300px";
+    const defaultPosition = position || "bottom-right";
+
+    const top =
+      defaultPosition === "top-right" || defaultPosition === "top-left";
+    const right =
+      defaultPosition === "top-right" || defaultPosition === "bottom-right";
+    const bottom =
+      defaultPosition === "bottom-left" || defaultPosition === "bottom-right";
+    const left =
+      defaultPosition === "top-left" || defaultPosition === "bottom-left";
+
+    return `
+.donate-overlay {
+    position: fixed;
+    height: ${defaultSize};
+    width: ${defaultSize};
+    top: ${top ? "30px" : "auto"};    
+    right: ${right ? "30px" : "auto"};    
+    bottom: ${bottom ? "30px" : "auto"};    
+    left: ${left ? "30px" : "auto"};
+    z-index: 9998;
+    transition: transform .3s; }
+    .donate-overlay:hover {
+      text-decoration: none;
+      transform: scale(1.2); }
+    .donate-overlay .donate-coin {
+      position: absolute;
+      top: 14%;
+      left: 15%;
+      width: 70%;
+      height: 70%;
+      transition: transform 0.5s;
+      z-index: 9999; }
+      .donate-overlay .donate-coin:active {
+        transform: translateY(-100vh); }
+  
+  .rotate {
+    animation: rotate 11s linear infinite; }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(360deg); } }
+`;
+  };
+
+  const html = `
+<a class="donate-overlay" target="_blank" href="https://www.betterplace.me/safe-club-culture-safe-solidarity-unitedwestreamhb">
+    <img class="rotate donate-font" src='assets/images/donate.svg' />
+    <img class="donate-coin" src='assets/images/coin.gif' />
+</a>
+`;
+
+  const appendCSS = () => {
+    var styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = style();
+    document.head.appendChild(styleSheet);
+  };
+
+  const appendHtml = () => {
+    document.body.insertAdjacentHTML("beforeend", html);
+  };
+
+  appendCSS();
+  appendHtml();
+})();
