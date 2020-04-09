@@ -57,7 +57,7 @@
   const html = `
 <a class="donate-overlay" target="_blank" href="https://www.betterplace.me/safe-club-culture-safe-solidarity-unitedwestreamhb">
     <img class="rotate donate-font" src='http://radioangrezi.de/assets/images/donate.svg' />
-    <img class="donate-coin" src='http://radioangrezi.de/assets/images/coin.gif' />
+    <img class="donate-coin" src='http://radioangrezi.de/assets/images/coin-transparent.gif' />
 </a>
 `;
 
