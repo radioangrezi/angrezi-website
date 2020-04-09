@@ -1,7 +1,7 @@
 var ra_coin_embed = (options) => {
   const style = (size, position) => {
-
     const defaultSize = size || "300px";
+
     if (!(typeof defaultSize === "string"))
         throw new Error("size must be css string literal");
     const defaultPosition = position || "bottom-right";
@@ -18,7 +18,7 @@ var ra_coin_embed = (options) => {
     const left =
       defaultPosition === "top-left" || defaultPosition === "bottom-left";
 
-    return `
+    const css = `
 .donate-overlay {
     position: fixed;
     height: ${defaultSize};
@@ -52,6 +52,7 @@ var ra_coin_embed = (options) => {
     to {
       transform: rotate(360deg); } }
 `;
+        return css;
   };
 
   const html = `
@@ -62,16 +63,11 @@ var ra_coin_embed = (options) => {
 `;
 
   const appendCSS = () => {
-
     var styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
     styleSheet.innerText = style();
-    if (options) {
-        const { size, position } = options;
-        style(size, position);
-    } else {
-        style();
-    }
+    const { size, position } = options || {};
+    styleSheet.innerText = style(size, position);
     document.head.appendChild(styleSheet);
   };
 
