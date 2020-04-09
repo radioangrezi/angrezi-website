@@ -1,4 +1,4 @@
-(() => {
+var ra_coin_embed(options) => {
   const style = (size, position) => {
 
     const defaultSize = size || "300px";
@@ -66,7 +66,6 @@
     var styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
     styleSheet.innerText = style();
-    var options = window.RA_COIN_OPTIONS;
     if (options) {
         const { size, position } = options;
         style(size, position);
@@ -82,4 +81,4 @@
 
   appendCSS();
   appendHtml();
-})();
+};
