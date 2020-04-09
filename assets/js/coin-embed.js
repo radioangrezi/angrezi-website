@@ -1,9 +1,13 @@
 (() => {
   const style = (size, position) => {
-    if (!(typeof size === "string"))
-      throw new Error("size must be css string literal");
+
     const defaultSize = size || "300px";
+    if (!(typeof defaultSize === "string"))
+        throw new Error("size must be css string literal");
     const defaultPosition = position || "bottom-right";
+    const possiblePossitions = ["top-right", "bottom-right", "bottom-left", "top-left"];
+    if (!possiblePossitions.includes(defaultPosition)) 
+        throw new Error(`position must be ${possiblePossitions.join(", ")}`);
 
     const top =
       defaultPosition === "top-right" || defaultPosition === "top-left";
@@ -52,8 +56,8 @@
 
   const html = `
 <a class="donate-overlay" target="_blank" href="https://www.betterplace.me/safe-club-culture-safe-solidarity-unitedwestreamhb">
-    <img class="rotate donate-font" src='assets/images/donate.svg' />
-    <img class="donate-coin" src='assets/images/coin.gif' />
+    <img class="rotate donate-font" src='http://radioangrezi.de/assets/images/donate.svg' />
+    <img class="donate-coin" src='http://radioangrezi.de/assets/images/coin.gif' />
 </a>
 `;
 
