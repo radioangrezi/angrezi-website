@@ -242,7 +242,7 @@ main {
   max-width: none;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         /*grid-gap: 2rem;*/
         outline: 1px solid black;
         font-family: 'Sporting Grotesque_Regular';
@@ -695,8 +695,9 @@ input[type=submit]:hover {
       font-family: 'Sporting Grotesque_Bold','Millimetre', Arial;
       font-weight: bold;
       transform: rotate(-20deg);
-
     }
+
+
 
     .holidays {
       font-size: 2rem;
@@ -745,7 +746,10 @@ input[type=submit]:hover {
     margin-top: 1rem;
     text-align: center;
     font-size: 0.8em;
+  }
 
+  .show-description {
+    white-space: pre-wrap;
   }
 
   article > p {
