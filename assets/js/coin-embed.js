@@ -1,4 +1,4 @@
-var ra_coin_embed(options) => {
+var ra_coin_embed = (options) => {
   const style = (size, position) => {
 
     const defaultSize = size || "300px";
