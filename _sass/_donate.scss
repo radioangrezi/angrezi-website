@@ -9,6 +9,13 @@
     z-index: 9998;
     transition: transform .3s;
 
+    @media (max-width: 500px) {
+        height: 150px;
+        width: 150px;
+        right: 0px;
+        bottom: 0px;
+    }
+
     &:hover {
         text-decoration: none;
         transform: scale(1.2);
