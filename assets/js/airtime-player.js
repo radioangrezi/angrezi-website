@@ -349,14 +349,21 @@ $(document).ready(function() {
 });
 
 // attach marquee to <title>
-var title_marquee = "RADIO ANGREZI +++ ";
-window.addEventListener("load", function () {
-var step = function() {
+var title_default = document.title;
+var title_marquee = document.title;
+var title_marquee_interval = null;
+var title_marquee_step = function() {
   title_marquee = title_marquee.substr(1) + title_marquee.substr(0,1);
   document.title = title_marquee.substr(0,15);
 }
-setInterval (step, 100);
-});
+var title_marquee_start = function(){
+    marquee_interval = setInterval (title_marquee_step, 100);
+}
+var title_marquee_stop = function(text = title_default){
+    clearInterval(title_marquee_interval)
+    document.title = text
+}
+
 
 
 // variables for updating the player's metadata
@@ -402,6 +409,7 @@ function attachStreamMetadataToPlayer(){
                 // artist_elm.attr("title", str_offline);
                 marquee_html = html_offline;
                 marquee_str = str_offline;
+                title_marquee_stop();
                 time_to_next_track_starts = 20000;
             } else {
 
@@ -417,6 +425,7 @@ function attachStreamMetadataToPlayer(){
                 }else{
                     marquee_str = marquee_html = "Live from the Angrezi Studio at Speicher XI"
                 }
+                title_marquee_start();
 
                 var current_time = new Date();
 
