@@ -356,11 +356,12 @@ var title_marquee_step = function() {
   title_marquee = title_marquee.substr(1) + title_marquee.substr(0,1);
   document.title = title_marquee.substr(0,15);
 }
-var title_marquee_start = function(){
-    marquee_interval = setInterval (title_marquee_step, 100);
+var title_marquee_start = function() {
+    if (!title_marquee_interval) title_marquee_interval = setInterval (title_marquee_step, 100);
 }
 var title_marquee_stop = function(text = title_default){
     clearInterval(title_marquee_interval)
+    title_marquee_interval = undefined;
     document.title = text
 }
 
