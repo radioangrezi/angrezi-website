@@ -28,7 +28,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
               episodeDateEnd = z['ends'];
 
           // Angrezi: Filter out shows containing "test" or "untitled show"
-          var filterout_expr = /untitled show|test/i;
+          var filterout_expr = /untitled show|\(test\)/i;
 
           if (filterout_expr.test(episodeName)) {
             continue;
