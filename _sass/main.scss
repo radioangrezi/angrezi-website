@@ -61,7 +61,7 @@ svg {
 }
 
 ul {
-  
+  list-style-type: square;
 }
 
 address {
@@ -223,12 +223,8 @@ a:hover, a:active {
 
 .page main {
   grid-template-columns: none;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
   word-break: break-word;
-
-  & > * {
-    padding: 0 2rem;
-  }
 
   strong {
     background: black;
