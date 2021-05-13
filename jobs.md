@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Radio Angrezi offers Jobs
+title: We have a job to offer
 permalink: /jobs
 ---
 
