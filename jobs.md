@@ -16,11 +16,11 @@ wir sind Radio Angrezi, ein autonomes studentisches Kollektiv und betreiben seit
 
 ## Wir suchen zum nächstmöglichen Zeitpunkt eine technisch versierte studierende Person, die Teil des Teams werden möchte.
 
-**Umfang / Beginn / Dauer:**
+### **Umfang / Beginn / Dauer:**
 
 20 Std pro Monat / ab sofort / bisher limitiert auf 6 Monate
 
-**Die Stelle beinhaltet folgende Aufgaben:**
+### **Die Stelle beinhaltet folgende Aufgaben:**
 - Entwicklung und Wartung der technischen Infrastruktur von Radio Angrezi 
 - Betreuung, Pflege und Inventarisierung des Studios 
 - Anschaffung von Ausstattung und Inventarisierung 
@@ -30,7 +30,7 @@ wir sind Radio Angrezi, ein autonomes studentisches Kollektiv und betreiben seit
 - Bereitschaftsdiente bei Störungen
   
 
-**Was du mitbringen solltest:** 
+### **Was du mitbringen solltest:** 
 - Mind. 3 Jahre Erfahrung mit Webentwicklung (Frontend und Backend, JS, PHP, Python gewünscht) 
 - Mind. 1 Jahr Erfahrung mit Linux-Serveradministration/Sysops 
 - Erste Erfahrungen im Bereich Audioproduktion für Web, Streaming oder Podcasting 
@@ -40,7 +40,7 @@ wir sind Radio Angrezi, ein autonomes studentisches Kollektiv und betreiben seit
 - Interesse an Kollektivstrukturen und Selbstverwaltung 
 
 
-**Erfahrung in ein oder mehreren dieser Bereiche/Technologien sind von Vorteil:** 
+### **Erfahrung in ein oder mehreren dieser Bereiche/Technologien sind von Vorteil:** 
 - Audiostreaming 
 - Icecast o. LibreTime/Airtime und Liquidsoap 
 - Python 
@@ -49,7 +49,7 @@ wir sind Radio Angrezi, ein autonomes studentisches Kollektiv und betreiben seit
 - MS365/Sharepoint 
 - Asterisk o. anderer VoIP-Telefonie 
 
-**Was außerdem super wäre, aber nicht zwingend notwendig:** 
+### **Was außerdem super wäre, aber nicht zwingend notwendig:** 
 - Interesse oder Erfahrung mit Audioprogrammierung o. Archivsystemen
 - GitHub-Account 
 
@@ -73,10 +73,11 @@ Hello dear people!
 we are Radio Angrezi, an autonomous student collective hosting a Radio studio at Speicher XI, Hochschule für Künste. We are spanning multiple disciplines, study departments and languages and are broadcasting weekly shows including DJ sets, live perfomances and experimental pieces sound, music and voice.
 ## We are looking for a tech savvy student to become part of the team as soon as possible.
 
-**Scope / Start / Duration:** 
+### **Scope / Start / Duration:** 
+
 20 hrs per month / starting immediately / so far limited to 6 months
 
-**The position involves the following tasks:**
+### **The position involves the following tasks:**
 - Development and maintenance of Radio Angrezi's technical infrastructure.
 - Support, maintenance and inventory of the studio
 - Acquisition of equipment and inventory
@@ -85,7 +86,7 @@ we are Radio Angrezi, an autonomous student collective hosting a Radio studio at
 - Organization of workshops for introduction to technology and production processes
 - On-call duties in case of malfunctions
 
-**We expect the following:**
+### **We expect the following:**
 - At least 3 years of experience with web development (frontend and backend, JS, PHP, Python desired).
 - At least 1 year of experience with Linux server administration/sysops
 - Initial experience with audio production for web, streaming, or podcasting
@@ -94,7 +95,7 @@ we are Radio Angrezi, an autonomous student collective hosting a Radio studio at
 - The ability to independently comprehend and solve (technical) problems
 - Interest in collective structures and self-management
 
-**Experience in one or more of these areas/technologies is an advantage:**
+### **Experience in one or more of these areas/technologies is an advantage:**
 - Audio streaming
 - Icecast o. LibreTime/Airtime and Liquidsoap
 - Python
@@ -103,7 +104,7 @@ we are Radio Angrezi, an autonomous student collective hosting a Radio studio at
 - MS365/Sharepoint
 - Asterisk o. other VoIP telephony
 
-**Nice to have but not mandatory:**
+### **Nice to have but not mandatory:**
 - Interest or experience with audio programming or archive systems
 - GitHub account
 - In case this sounds interesting to you please feel free to write us an e-mail and tell us a bit about yourself and your experiences! We're looking forward to your applications!
