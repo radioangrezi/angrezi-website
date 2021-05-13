@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Radio Angrezi offers Jobs
+permalink: /jobs
 ---
 
 <a id="de"></a>
