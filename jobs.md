@@ -49,7 +49,7 @@ permalink: /jobs
 - GitHub-Account 
 
 
-[Falls das interessant klingt, schreib' uns gern eine E-Mail und erzählen Sie uns ein wenig über sich und Ihre Erfahrungen. Wir freuen uns auf Eure Bewerbungen!](mailto:radioangrezi@hfk-bremen.de)
+[Falls das interessant klingt, schreib' uns gern eine E-Mail und erzähl uns ein wenig über dich und deine Erfahrungen. Wir freuen uns auf deine Bewerbung!](mailto:radioangrezi@hfk-bremen.de)
 
 Macht's gut! 💌 
 
@@ -100,7 +100,7 @@ ANGREZI
 - Interest or experience with audio programming or archive systems
 - GitHub account
 
-[In case this sounds interesting to you please feel free to write us an e-mail and tell us a bit about yourself and your experiences! We're looking forward to your applications!](mailto:radioangrezi@hfk-bremen.de)
+[In case this sounds interesting to you please write us an e-mail and tell us a bit about yourself and your experiences! We're looking forward to your applications!](mailto:radioangrezi@hfk-bremen.de)
 
 Take care. 💌 
 
