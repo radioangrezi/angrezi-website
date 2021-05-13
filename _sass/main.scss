@@ -36,8 +36,6 @@ body {
 
 body,
 .wrapper,
-ul,
-li,
 p {
   margin: 0;
   padding: 0;
@@ -63,7 +61,7 @@ svg {
 }
 
 ul {
-  list-style-type: none;
+  
 }
 
 address {
@@ -521,6 +519,7 @@ input[type=submit]:hover {
   display: flex;
   justify-content: center;
   padding: 0.6rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -659,6 +658,9 @@ input[type=submit]:hover {
       nav ul {
         display: flex;
         justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
       }
 
 
