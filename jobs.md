@@ -7,12 +7,7 @@ permalink: /jobs
 <a id="de"></a>
 <a href="#en">ENGLISH BELOW</a>
 
-
 <small>2021-05-01</small>
-
-Hallo allerseits!
-
-wir sind Radio Angrezi, ein autonomes studentisches Kollektiv und betreiben seit einigen Jahren ein Radiostudio im Speicher XI der Hochschule für Künste in der Überseestadt. Wir sind studiengangs- und sprachübergreifend und senden wöchentlich Sendungen mit DJ-Sets, Live Perfomances und experimentellen Stücken aus Klang, Musik und Stimme auf radioangrezi.de.
 
 ## Wir suchen zum nächstmöglichen Zeitpunkt eine technisch versierte studierende Person, die Teil des Teams werden möchte.
 
@@ -68,9 +63,6 @@ ANGREZI
 
 <small>2021-05-01</small>
 
-Hello dear people!
-
-we are Radio Angrezi, an autonomous student collective hosting a Radio studio at Speicher XI, Hochschule für Künste. We are spanning multiple disciplines, study departments and languages and are broadcasting weekly shows including DJ sets, live perfomances and experimental pieces sound, music and voice.
 ## We are looking for a tech savvy student to become part of the team as soon as possible.
 
 ### **Scope / Start / Duration:** 
