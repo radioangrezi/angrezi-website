@@ -63,7 +63,7 @@ Radio Angrezi ist ein autonomes studentisches Kollektiv. Seit 2017 betreiben wir
 
 <small>2021-05-01</small>
 
-## We are looking for a tech savvy student to become part of the team as soon as possible.
+## Technician wanted for Radio Angrezi (student job)
 
 ### **Scope / Start / Duration:** 
 
