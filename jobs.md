@@ -1,6 +1,6 @@
 ---
 layout: page
-title: We have a job to offer
+title: Work at Radio Angrezi
 permalink: /jobs
 ---
 
@@ -9,11 +9,11 @@ permalink: /jobs
 
 <small>2021-05-01</small>
 
-## Wir suchen zum nächstmöglichen Zeitpunkt eine technisch versierte studierende Person, die Teil des Teams werden möchte.
+## Techniker*in für Radio Angrezi gesucht (stud. HK)
 
 ### **Umfang / Beginn / Dauer:**
 
-20 Std pro Monat / ab sofort / bisher limitiert auf 6 Monate
+20 Std pro Monat / ab sofort / vorerst limitiert auf 6 Monate
 
 ### **Die Stelle beinhaltet folgende Aufgaben:**
 - Entwicklung und Wartung der technischen Infrastruktur von Radio Angrezi 
@@ -48,12 +48,12 @@ permalink: /jobs
 - Interesse oder Erfahrung mit Audioprogrammierung o. Archivsystemen
 - GitHub-Account 
 
+Radio Angrezi ist ein autonomes studentisches Kollektiv. Seit 2017 betreiben wir ein Radio im Speicher XI der Hochschule für Künste in der Überseestadt. Wir sind studiengangs- und sprachübergreifend und senden wöchentlich Sendungen mit DJ-Sets, Live Perfomances und experimentellen Stücken aus Klang, Musik und Stimme auf radioangrezi.de.
 
-[Falls das interessant klingt, schreib' uns gern eine E-Mail und erzähl uns ein wenig über dich und deine Erfahrungen. Wir freuen uns auf deine Bewerbung!](mailto:radioangrezi@hfk-bremen.de)
+**Wir suchen zum nächstmöglichen Zeitpunkt eine technisch erfahrene Student*in, die Teil des Teams werden möchte.**
 
-Macht's gut! 💌 
 
-ANGREZI
+[Wir freuen uns auf deine Bewerbung an radioangrezi@hfk-bremen.de!](mailto:radioangrezi@hfk-bremen.de)
 
 <br/><br/>
 
@@ -100,8 +100,9 @@ ANGREZI
 - Interest or experience with audio programming or archive systems
 - GitHub account
 
-[In case this sounds interesting to you please write us an e-mail and tell us a bit about yourself and your experiences! We're looking forward to your applications!](mailto:radioangrezi@hfk-bremen.de)
+Radio Angrezi is an experimental ground for sound, music, voice and live performance. It broadcasts weekly from its studio at Speicher XI (Bremen) on radioangrezi.de, as well as occasionally on 92,5 FM, receivable in the Bremen and the surrounding area. In addition special broadcasts covering concerts, lectures, presentations and exhibition openings are produced regularly.
+Radio Angrezi is an autonomous student collective, spanning all disciplines, study departments and multiple languages. It is open for students, teachers and guests. It aims to rise questions, develop new conditions, shapes and formats, to perform and to broadcast – collectively or individually – to listen, to observe and to discuss.
 
-Take care. 💌 
+**We are looking for a technically experienced student, who would like to join the team.**
 
-ANGREZI
+[We're looking forward to your applications to radioangrezi@hfk-bremen.de!](mailto:radioangrezi@hfk-bremen.de)
