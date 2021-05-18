@@ -10,7 +10,7 @@ permalink: /jobs
 <small>2021-05-01</small>
 
 ## Techniker*in für Radio Angrezi gesucht (stud. HK)
-
+<img width="100" height="100" src='assets/images/job-coin-image.gif' />
 ### **Umfang / Beginn / Dauer:**
 
 20 Std pro Monat / ab sofort / vorerst limitiert auf 6 Monate

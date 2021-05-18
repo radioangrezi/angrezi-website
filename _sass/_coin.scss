@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.donate-overlay {
+.coin-overlay {
     position: fixed;
     height: 200px;
     width: 200px;
@@ -21,7 +21,7 @@
         transform: scale(1.2);
     }
 
-    .donate-coin {
+    .coin {
         position: absolute;
         top: 14%;
         left: 15%;
@@ -38,6 +38,10 @@
 
 .rotate {
     animation: rotate 11s linear infinite;
+}
+
+.rotate.reverse {
+    animation-direction: reverse;
 }
 
 @keyframes rotate {
