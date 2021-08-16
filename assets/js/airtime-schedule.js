@@ -84,7 +84,7 @@ $.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(cale
         }
       }
       if(episodeCounter < 1){
-        var t = document.querySelector('template#schedule-no-show-regular')
+        var t = document.querySelector('template#schedule-no-show')
         $('.show-section').append(document.importNode(t.content, true));
       }
       //$('.calendar__data').append('<div class="row"><div class="xs-10 xs-offset-2"><h2>Live Schedule</h2></div></div>');
