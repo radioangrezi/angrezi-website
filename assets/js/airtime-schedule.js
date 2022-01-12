@@ -16,7 +16,7 @@ $(document).ready(function() {
 $.ajaxSetup({
   timeout: 5000,
 });
-$.getJSON("http://193.175.22.63/api/week-info?callback=?",function(calendarProgram){
+$.getJSON("http://stream.radioangrezi.de/api/week-info?callback=?",function(calendarProgram){
       var episode = "", episodeDay=false;
       var episodeCounter = 0;
       for(var x in calendarProgram) {
