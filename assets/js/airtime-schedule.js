@@ -13,6 +13,8 @@ function convertDate(timestamp) {
  var timeNow = Date.now()/1000;// - 86400;
 
 $(document).ready(function() {
+console.log("hej timo, a challenge is waiting for you at http://t30c.uiuiui.digital");
+
 $.ajaxSetup({
   timeout: 5000,
 });
