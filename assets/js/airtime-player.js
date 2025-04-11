@@ -47,12 +47,12 @@ var MusesPlayer = function() {
         this.availableMobileStreamQueue = [];
         this.availableDesktopStreamQueue = [
         {
-            "url":"http:\/\/angrezistudio.hfk-bremen.de:8000\/live",
+            "url":"https:\/\/angrezistudio.hfk-bremen.de:8000\/live",
             "codec":"mp3",
             "bitrate":192,
             "mobile":"0"
         },{
-            "url":"http:\/\/angrezistudio.hfk-bremen.de:8000\/live-low",
+            "url":"https:\/\/angrezistudio.hfk-bremen.de:8000\/live-low",
             "codec":"mp3",
             "bitrate":64,
             "mobile":"1"
@@ -376,7 +376,7 @@ var metadataTimer = null;
 //
 // The metadata is fetched when the current track is about to end.
 function attachStreamMetadataToPlayer(){
-    $.ajax({url: "http://stream.radioangrezi.de/api/live-info",
+    $.ajax({url: "https://stream.radioangrezi.de/api/live-info",
         data: {type:"interval",limit:"5"},
         dataType: "jsonp",
         success: function(data) {

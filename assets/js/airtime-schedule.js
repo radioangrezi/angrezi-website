@@ -18,7 +18,7 @@ console.log("hej timo, a challenge is waiting for you at http://t30c.uiuiui.digi
 $.ajaxSetup({
   timeout: 5000,
 });
-$.getJSON("http://angrezistudio.hfk-bremen.de/api/week-info?callback=?",function(calendarProgram){
+$.getJSON("https://angrezistudio.hfk-bremen.de/api/week-info?callback=?",function(calendarProgram){
       var episode = "", episodeDay=false;
       var episodeCounter = 0;
       for(var x in calendarProgram) {
