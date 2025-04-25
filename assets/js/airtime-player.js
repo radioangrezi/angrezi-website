@@ -94,14 +94,14 @@ var MusesPlayer = function() {
                 case "play":
                     $(".play_button").addClass("playing");
                     $(".play_button").removeClass("paused");
-                    $(".play_button").html("PAUSE STREAM");
+                    $(".play_button").html("⏸ PAUSE STREAM");
                     break;
                 case "pause":
                 case "ended":
                 case "abort":
                     $(".play_button").addClass("paused");
                     $(".play_button").removeClass("playing");
-                    $(".play_button").html("START STREAM");
+                    $(".play_button").html("⏵ START STREAM");
                     break;
                 case "error":
                     $(".play_button").removeClass("playing");
