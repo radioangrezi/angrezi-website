@@ -47,12 +47,12 @@ var MusesPlayer = function() {
         this.availableMobileStreamQueue = [];
         this.availableDesktopStreamQueue = [
         {
-            "url":"http:\/\/angrezistudio.hfk-bremen.de:8000\/live",
+            "url":"https:\/\/angrezistudio.hfk-bremen.de:8000\/live",
             "codec":"mp3",
             "bitrate":192,
             "mobile":"0"
         },{
-            "url":"http:\/\/angrezistudio.hfk-bremen.de:8000\/live-low",
+            "url":"https:\/\/angrezistudio.hfk-bremen.de:8000\/live-low",
             "codec":"mp3",
             "bitrate":64,
             "mobile":"1"
