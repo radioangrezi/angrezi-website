@@ -1,0 +1,176 @@
+# =====================================================================
+#  Radio Angrezi – website texts in English (en) and German (de)
+# ---------------------------------------------------------------------
+#  HOW TO EDIT
+#  - Every fixed text on the website lives here, once per language.
+#    Change a text here and it changes everywhere it is used.
+#  - HTML is allowed inside texts (links, <br/>, <i>, <b>).
+#  - If a "de" text is missing or empty, the English one is shown.
+#  - Keep the key names (left of the colon) unchanged; they are what
+#    the templates refer to.
+#  - Long page texts (special.md, jobs.md) are edited directly in those
+#    files, inside their <div class="i18n i18n-en"> / i18n-de blocks.
+#
+#  NOT TRANSLATED ON PURPOSE (comes from the studio server):
+#  show names, show descriptions and show times (LibreTime),
+#  the Angrezi Chat, and the archive website.
+# =====================================================================
+
+# --- Language switcher -----------------------------------------------
+lang_switch_label:
+  en: "Language"
+  de: "Sprache"
+
+# --- Scrolling marquee (top bar) -------------------------------------
+marquee_welcome:
+  en: "Welcome to Radio Angrezi!"
+  de: "Willkommen bei Radio Angrezi!"
+marquee_notify:
+  en: "Notification when on air?"
+  de: "Benachrichtigung, wenn wir auf Sendung sind?"
+marquee_on_air_now:          # followed by the show name from the server
+  en: "On Air Now"
+  de: "Jetzt auf Sendung"
+marquee_live_from_studio:
+  en: "Live from the Angrezi Studio at Speicher XI"
+  de: "Live aus dem Angrezi-Studio im Speicher XI"
+marquee_offline:
+  en: "Offline or maybe not"
+  de: "Offline – oder vielleicht doch nicht"
+
+# --- Livestream player button ----------------------------------------
+player_livestream:
+  en: "⏯ LIVESTREAM"
+  de: "⏯ LIVESTREAM"
+player_start:
+  en: "⏵ START STREAM"
+  de: "⏵ STREAM STARTEN"
+player_pause:
+  en: "⏸ PAUSE STREAM"
+  de: "⏸ STREAM PAUSIEREN"
+player_error:
+  en: "Error"
+  de: "Fehler"
+player_hint:                 # tooltip under the button
+  en: "Press Space to play / pause"
+  de: "Leertaste: Abspielen / Pause"
+player_aria:                 # read out by screen readers
+  en: "Play or pause the livestream (Spacebar)"
+  de: "Livestream abspielen oder pausieren (Leertaste)"
+
+# --- Navigation ------------------------------------------------------
+nav_archive:
+  en: "ANGREZI ARCHIVE"
+  de: "ANGREZI ARCHIV"
+
+# --- Notification bar ------------------------------------------------
+propose_show:
+  en: "Propose a show &rarr;"
+  de: "Sendung vorschlagen &rarr;"
+telegram:
+  en: "ON-AIR-<i>bing</i> via Telegram"
+  de: "ON-AIR-<i>bing</i> per Telegram"
+mailinglist_placeholder:     # grey text inside the e-mail field (no HTML here)
+  en: "become a friend of the mailing list"
+  de: "werde Freund*in der Mailingliste"
+
+# --- Home page -------------------------------------------------------
+chat_label:
+  en: "Angrezi Chat"
+  de: "Angrezi Chat"
+
+# --- Schedule messages (shown when there are no shows / no connection)
+schedule_no_shows:
+  en: >-
+    We have no broadcasts scheduled within the next week. <br/>Can't stand
+    the silence? <a href="/special.html">Contribute</a> to the programme
+    with your production.
+  de: >-
+    In der kommenden Woche sind keine Sendungen geplant. <br/>Du hältst die
+    Stille nicht aus? <a href="/special.html">Trag</a> mit deiner Produktion
+    zum Programm bei.
+schedule_intermission_title:
+  en: "INTER-<br/>MISSION"
+  de: "SENDE-<br/>PAUSE"
+schedule_intermission_text:
+  en: >-
+    Until the 9th of september the radio will be turned off.<br/>
+    We are eager to be back in september. You won't be disappointed.
+  de: >-
+    Bis zum 9. September ist das Radio ausgeschaltet.<br/>
+    Wir freuen uns darauf, im September zurück zu sein. Du wirst nicht enttäuscht sein.
+schedule_fail_title:
+  en: "UUPZZ"
+  de: "UUPZZ"
+schedule_fail_text:
+  en: "Can't connect to the studio: Schedule currently not available right now. Sorry!"
+  de: "Keine Verbindung zum Studio: Der Sendeplan ist gerade nicht verfügbar. Sorry!"
+
+# --- Date names used for the schedule dates (keep 7 days / 12 months, Sunday first)
+weekdays:
+  en: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+  de: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+months:
+  en: [January, February, March, April, May, June, July, August, September, October, November, December]
+  de: [Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+
+# --- Footer ----------------------------------------------------------
+footer_about:
+  en: >-
+    Radio Angrezi is an experimental ground for sound, music, voice and live
+    performance. It broadcasts weekly from its studio at Speicher XI (Bremen)
+    on radioangrezi.de, as well as occasionally on 92,5 FM, receivable in the
+    Bremen and the surrounding area. In addition special broadcasts covering
+    concerts, lectures, presentations and exhibition openings are produced
+    regularly.<br/><br/>
+    Radio Angrezi is an autonomous student collective, spanning all
+    disciplines, study departments and multiple languages. It is open for
+    students, teachers and guests. It aims to rise questions, develop new
+    conditions, shapes and formats, to perform and to broadcast – collectively
+    or individually – to listen, to observe and to discuss.<br/><br/>
+    Since 2019, Radio Angrezi has been organizing experimental formats like a
+    performance at OUT NOW festival, as part of the summerschool at the
+    Biennale di Venezia or locally in Bremen at the Open Space Domshof, the
+    Irgendwo or the Güterbahnhof.<br/><br/>
+    Interested in broadcasting, performing, supporting, mixing or just hanging
+    out? Drop by in Segment 7 in Speicher XI or send a line to
+    <a class="black-link" href="mailto:radioangrezi@hfk-bremen.de">radioangrezi@hfk-bremen.de</a>
+  de: >-
+    Radio Angrezi ist ein Experimentierfeld für Klang, Musik, Stimme und
+    Live-Performance. Es sendet wöchentlich aus seinem Studio im Speicher XI
+    (Bremen) auf radioangrezi.de sowie gelegentlich auf 92,5 FM, empfangbar in
+    Bremen und Umgebung. Darüber hinaus entstehen regelmäßig Sondersendungen zu
+    Konzerten, Vorträgen, Präsentationen und Ausstellungseröffnungen.<br/><br/>
+    Radio Angrezi ist ein autonomes studentisches Kollektiv – über alle
+    Disziplinen, Studiengänge und Sprachen hinweg. Es steht Studierenden,
+    Lehrenden und Gästen offen. Es will Fragen aufwerfen, neue Bedingungen,
+    Formen und Formate entwickeln, performen und senden – kollektiv oder
+    individuell –, zuhören, beobachten und diskutieren.<br/><br/>
+    Seit 2019 organisiert Radio Angrezi experimentelle Formate, etwa eine
+    Performance beim OUT NOW Festival, im Rahmen der Summer School auf der
+    Biennale di Venezia oder lokal in Bremen auf dem Open Space Domshof, im
+    Irgendwo oder im Güterbahnhof.<br/><br/>
+    Lust zu senden, zu performen, zu unterstützen, zu mischen oder einfach
+    abzuhängen? Komm im Segment 7 im Speicher XI vorbei oder schreib uns an
+    <a class="black-link" href="mailto:radioangrezi@hfk-bremen.de">radioangrezi@hfk-bremen.de</a>
+footer_visit:
+  en: "Visit the studio during the live streams:"
+  de: "Besuch das Studio während der Livestreams:"
+footer_country:
+  en: "Germany"
+  de: "Deutschland"
+footer_call_in:
+  en: "Or call in to the show:"
+  de: "Oder ruf in der Sendung an:"
+footer_contact_heading:
+  en: "Contact Radio Angrezi:"
+  de: "Kontakt zu Radio Angrezi:"
+footer_contact_text:
+  en: "You can write us ideas about any kind of contribution or just to say hi!"
+  de: "Schreib uns deine Ideen für Beiträge aller Art – oder sag einfach Hallo!"
+footer_email:
+  en: "Email"
+  de: "E-Mail"
+footer_production_office:
+  en: "Production office"
+  de: "Produktionsbüro"

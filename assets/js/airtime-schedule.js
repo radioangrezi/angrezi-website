@@ -5,9 +5,19 @@ function convertTime(timestamp) {
   return time;
 }
 function convertDate(timestamp) {
-  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],months = ['January','February','March','April','May','June','July','August','September','October','November','December'],d = new Date(timestamp * 1000),yyyy = d.getFullYear(),month = d.getMonth(),month = months[month],day = d.getDay(),day = days[day],dd = ('0' + d.getDate()).slice(-2),dateFormatted;
-  dateFormatted = day+', '+dd+' '+month;
-  return dateFormatted;
+  // Weekday/month names come from _data/i18n.yml (weekdays/months) via the EN/DE switcher.
+  var d = new Date(timestamp * 1000),
+      I = window.ANGREZI_I18N || {},
+      enDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      enMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function fmt(lang) {
+    var days = (I.weekdays && I.weekdays[lang]) || enDays,
+        months = (I.months && I.months[lang]) || enMonths;
+    if (lang === 'de') return days[d.getDay()] + ', ' + d.getDate() + '. ' + months[d.getMonth()];
+    return days[d.getDay()] + ', ' + ('0' + d.getDate()).slice(-2) + ' ' + months[d.getMonth()];
+  }
+  return '<span class="i18n i18n-en" lang="en">' + fmt('en') + '</span>' +
+         '<span class="i18n i18n-de" lang="de">' + fmt('de') + '</span>';
 }
 
  var timeNow = Date.now()/1000;// - 86400;

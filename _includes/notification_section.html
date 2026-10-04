@@ -1,10 +1,71 @@
+<style>
+  .notification-section .proposal-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3em;
+    flex: 0 0 350px;
+    min-width: 350px;
+  }
+  .notification-section .proposal-link a {
+    display: inline-block;
+    background: black;
+    color: #ffff00 !important;
+    border: 1px solid black;
+    box-shadow: 3px 3px 0 0 black;
+    padding: 0.15rem 1.2rem;
+    line-height: 1.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+  .notification-section .proposal-link a:link,
+  .notification-section .proposal-link a:visited,
+  .notification-section .proposal-link a:hover,
+  .notification-section .proposal-link a:active {
+    color: #ffff00 !important;
+  }
+  .notification-section .proposal-link a:hover {
+    background: #0000ff;
+  }
+  .notification-section .proposal-link a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 0 black;
+  }
+</style>
 <div class="notification-section">
-    <div class="telegram-link flex-item grid-outline-block">
-        <a href="https://t.me/radioangrezi">ON-AIR-<i>bing</i> via Telegram</a>
-    </div>
-    <div class="mailinglist-form flex-item grid-outline-block">
-        <form action="https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/subscribe/ra-friends" method="POST" target="_blank" class="newsletter-form">
-            <input type="email" placeholder="become a friend of the mailing list" name="email" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" class="email"><button type="submit" class="submit">→</button>
-        </form>
-    </div>
+  <div class="proposal-link flex-item grid-outline-block">
+    <a
+      href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=72nnCfA49Eyp4hlMzNJHYZPXh5c-nxpDgLPZcmlCJlJUOE9XUTNBTFFEOFpEUEFOQ0xOTVdQSDcxRC4u"
+      target="_blank"
+      rel="noopener"
+      >{% include t.html key="propose_show" %}</a
+    >
+  </div>
+  <div class="telegram-link flex-item grid-outline-block">
+    <a href="https://t.me/radioangrezi">{% include t.html key="telegram" %}</a>
+  </div>
+  <div class="mailinglist-form flex-item grid-outline-block">
+    <form
+      action="https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/subscribe/ra-friends"
+      method="POST"
+      target="_blank"
+      class="newsletter-form"
+    >
+      <input
+        type="email"
+        placeholder="become a friend of the mailing list"
+        data-i18n-attr="placeholder:mailinglist_placeholder"
+        name="email"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        required=""
+        class="email"
+      /><button type="submit" class="submit">→</button>
+    </form>
+  </div>
 </div>
