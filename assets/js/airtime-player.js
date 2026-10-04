@@ -21,6 +21,11 @@ var MAX_MOBILE_SCREEN_WIDTH = 760;
 //    customizations and whether or not the player is in Flash or HTML5
 //    mode.
 
+// --- EN/DE text helpers (texts in _data/i18n.yml, loaded by _includes/i18n_head.html).
+// Only our own fixed texts are translated; show names etc. from the server are left as they are.
+function angreziLabel(key, fallback) { return (typeof window.angreziTHtml === "function") ? window.angreziTHtml(key) : fallback; }
+function angreziText(key, fallback) { return (typeof window.angreziT === "function") ? window.angreziT(key) : fallback; }
+
 var MusesPlayer = function() {
     this.mobileDetect = this.mobileDetect();
     this.playerMode = "auto";
@@ -94,18 +99,18 @@ var MusesPlayer = function() {
                 case "play":
                     $(".play_button").addClass("playing");
                     $(".play_button").removeClass("paused");
-                    $(".play_button").html("⏸ PAUSE STREAM");
+                    $(".play_button").html(angreziLabel("player_pause", "⏸ PAUSE STREAM"));
                     break;
                 case "pause":
                 case "ended":
                 case "abort":
                     $(".play_button").addClass("paused");
                     $(".play_button").removeClass("playing");
-                    $(".play_button").html("⏵ START STREAM");
+                    $(".play_button").html(angreziLabel("player_start", "⏵ START STREAM"));
                     break;
                 case "error":
                     $(".play_button").removeClass("playing");
-                    $(".play_button").html("Error");
+                    $(".play_button").html(angreziLabel("player_error", "Error"));
                     break;
             }
         }
@@ -387,8 +392,8 @@ function attachStreamMetadataToPlayer(){
             var description_elm = $(".now_playing .show_description");
             var marquee_elm = $(".now_playing .marquee");
             var str_off_air = "Off Air";
-            var str_offline = "Offline or maybe not";
-            var html_offline = "Offline or maybe not – <a href=\"https://t.me/radioangrezi\">Notification when on air?</a>";
+            var str_offline = angreziText("marquee_offline", "Offline or maybe not");
+            var html_offline = angreziLabel("marquee_offline", "Offline or maybe not") + " – <a href=\"https://t.me/radioangrezi\">" + angreziLabel("marquee_notify", "Notification when on air?") + "</a>";
             var marquee_str = ""
 
             // Angrezi: Filter out shows containing "test" or "untitled show"
@@ -422,9 +427,11 @@ function attachStreamMetadataToPlayer(){
                 description = data.currentShow[0].description;
 
                 if (show) {
-                    marquee_str = marquee_html = "On Air Now: " + show
+                    marquee_html = angreziLabel("marquee_on_air_now", "On Air Now") + ": " + show;
+                    marquee_str = angreziText("marquee_on_air_now", "On Air Now") + ": " + show
                 }else{
-                    marquee_str = marquee_html = "Live from the Angrezi Studio at Speicher XI"
+                    marquee_html = angreziLabel("marquee_live_from_studio", "Live from the Angrezi Studio at Speicher XI");
+                    marquee_str = angreziText("marquee_live_from_studio", "Live from the Angrezi Studio at Speicher XI")
                 }
                 title_marquee_start();
 

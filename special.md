@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Special Programme + Call for Participation
+title_de: Sonderprogramm + Call for Participation
 ---
 
-<a id="de"></a>
-<a href="#en">GERMAN BELOW</a>
+<div class="i18n i18n-en" lang="en" id="en" markdown="1">
 
 
 <small>2020-03-23</small>
@@ -31,10 +31,9 @@ We hope to contribute towards a collectiveness of solidarity creating a (virtual
 
 ANGREZI
 
-<br/><br/>
+</div>
 
-<a id="en"></a>
-<a href="#de">ENGLISH OBEN</a>
+<div class="i18n i18n-de" lang="de" id="de" markdown="1">
 
 
 <small>2020-03-23</small>
@@ -61,3 +60,5 @@ Wir hoffen, dass wir in dieser Zeit zu einem solidarischen und kommunikativen Mi
 💌 
 
 ANGREZI
+
+</div>

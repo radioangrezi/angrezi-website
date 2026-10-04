@@ -1,3 +1,32 @@
+<style>
+	/* Spacebar hint tooltip for the livestream button (mouse/keyboard devices only) */
+	.play_button { position: relative; }
+	@media (hover: hover) and (pointer: fine) {
+		.play_button::after {
+			content: attr(data-hint);
+			position: absolute;
+			left: 50%;
+			top: calc(100% + 12px);
+			transform: translateX(-50%) translateY(-4px);
+			background: black;
+			color: #ffff00;
+			font-family: 'Archivo Narrow', sans-serif;
+			font-size: 0.9rem;
+			line-height: 1.4;
+			padding: 0.3rem 0.7rem;
+			white-space: nowrap;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+			z-index: 1000;
+		}
+		.play_button:hover::after,
+		.play_button:focus-visible::after {
+			opacity: 1;
+			transform: translateX(-50%) translateY(0);
+		}
+	}
+</style>
 <nav class="main-nav">
 	<ul>
 		<li class="flex-item">
@@ -6,13 +35,53 @@
 					<div id="player">
 						<div class="airtime_player">
 							<div class="airtime_box">
-								<div id="play" class="play_button" onclick="musesPlayer.toggle()">⏯ LIVESTREAM</div>
+								<div id="play" class="play_button" onclick="musesPlayer.toggle()" role="button" tabindex="0" aria-label="Play or pause the livestream (Spacebar)" data-hint="Press Space to play / pause" data-i18n-attr="aria-label:player_aria;data-hint:player_hint">{% include t.html key="player_livestream" %}</div>
 							</div>
 						</div>
 					</div>
 					<div id="muses_skin">
 						<script type="text/javascript">
 							var musesPlayer = new MusesPlayer();
+						</script>
+						<script type="text/javascript">
+							// Spacebar (and Enter on the focused button) toggles the livestream.
+							(function () {
+								function isSpace(e) {
+									return e.key === ' ' || e.key === 'Spacebar' || e.code === 'Space' || e.keyCode === 32 || e.which === 32;
+								}
+								function isEnter(e) {
+									return e.key === 'Enter' || e.keyCode === 13 || e.which === 13;
+								}
+								function isTyping(el) {
+									if (!el) return false;
+									var tag = (el.tagName || '').toLowerCase();
+									return tag === 'input' || tag === 'textarea' || tag === 'select' ||
+										tag === 'button' || el.isContentEditable;
+								}
+								function toggle() {
+									if (typeof musesPlayer !== 'undefined' && musesPlayer && typeof musesPlayer.toggle === 'function') {
+										musesPlayer.toggle();
+									}
+								}
+								function onKey(e) {
+									e = e || window.event;
+									if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+									var target = e.target || e.srcElement;
+									var onPlayBtn = target && target.className && String(target.className).indexOf('play_button') !== -1;
+									if (isSpace(e) && (onPlayBtn || !isTyping(target))) {
+										if (e.preventDefault) e.preventDefault(); else e.returnValue = false; // stop page scroll
+										toggle();
+									} else if (isEnter(e) && onPlayBtn) {
+										if (e.preventDefault) e.preventDefault(); else e.returnValue = false;
+										toggle();
+									}
+								}
+								if (document.addEventListener) {
+									document.addEventListener('keydown', onKey, false);
+								} else if (document.attachEvent) {
+									document.attachEvent('onkeydown', onKey);
+								}
+							})();
 						</script>
 					</div>
 				</div>
@@ -30,7 +99,7 @@
 		</li>
 		<li class="flex-item"> 
 			<a href="https://archive.radioangrezi.de/" class="logo-link" id="play">
-					ANGREZI ARCHIVE
+					{% include t.html key="nav_archive" %}
 			</a>
 		</li>
 		</ul>

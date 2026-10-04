@@ -21,6 +21,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   receivable in the Bremen and the surrounding area. In addition special broadcasts covering concerts,
   lectures, presentations and exhibition openings are produced regularly.
 baseurl: "" # the subpath of your site, e.g. /blog
+# Language shown on a first visit: en | de | auto (follow the visitor's browser language).
+# A visitor's own EN/DE choice is remembered and always wins. Texts live in _data/i18n.yml
+default_lang: en
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

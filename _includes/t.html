@@ -1,0 +1,12 @@
+{%- comment -%}
+  Prints a text from _data/i18n.yml in both languages; the EN/DE switcher shows one.
+  Usage:  {% include t.html key="propose_show" %}
+          {% include t.html key="footer_about" tag="p" %}   (tag defaults to span)
+{%- endcomment -%}
+{%- assign _t = site.data.i18n[include.key] -%}
+{%- assign _tag = include.tag | default: "span" -%}
+{%- if _t -%}
+<{{ _tag }} class="i18n i18n-en" lang="en">{{ _t.en }}</{{ _tag }}><{{ _tag }} class="i18n i18n-de" lang="de">{% if _t.de and _t.de != "" %}{{ _t.de }}{% else %}{{ _t.en }}{% endif %}</{{ _tag }}>
+{%- else -%}
+[missing text: {{ include.key }}]
+{%- endif -%}

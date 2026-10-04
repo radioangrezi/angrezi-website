@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Work at Radio Angrezi
+title_de: Arbeiten bei Radio Angrezi
 permalink: /jobs
 ---
 
-<a id="de"></a>
-<a href="#en">ENGLISH BELOW</a>
+<div class="i18n i18n-de" lang="de" id="de" markdown="1">
 
 <small>2021-05-01</small>
 
@@ -55,10 +55,9 @@ Radio Angrezi ist ein autonomes studentisches Kollektiv. Seit 2017 betreiben wir
 
 [Wir freuen uns auf deine Bewerbung an radioangrezi@hfk-bremen.de!](mailto:radioangrezi@hfk-bremen.de)
 
-<br/><br/>
+</div>
 
-<a id="en"></a>
-<a href="#de">DEUTSCH OBEN</a>
+<div class="i18n i18n-en" lang="en" id="en" markdown="1">
 
 
 <small>2021-05-01</small>
@@ -106,3 +105,5 @@ Radio Angrezi is an autonomous student collective, spanning all disciplines, stu
 **We are looking for a technically experienced student, who would like to join the team.**
 
 [We're looking forward to your applications to radioangrezi@hfk-bremen.de!](mailto:radioangrezi@hfk-bremen.de)
+
+</div>

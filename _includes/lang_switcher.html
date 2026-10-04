@@ -1,0 +1,39 @@
+<style>
+  .marquee-wrapper { display: flex; align-items: stretch; }
+  .marquee-wrapper .marquee { flex: 1 1 auto; min-width: 0; }
+  .lang-switcher {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 0.4rem;
+    border-left: 1px solid black;
+    font-family: 'terminal_grotesque', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1;
+    background: #ffff00;
+  }
+  .lang-switcher .lang-btn {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0 0.45rem;
+    height: 22px;
+    line-height: 22px;
+    font: inherit;
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .lang-switcher .lang-btn:hover { color: #0000ff; }
+  .lang-switcher .lang-btn:focus-visible { outline: 2px solid #0000ff; outline-offset: 1px; }
+  .lang-switcher .lang-sep { padding: 0 0.1rem; }
+  /* Active language: black box with yellow text */
+  html:not([data-lang="de"]) .lang-switcher .lang-btn[data-set-lang="en"],
+  html[data-lang="de"] .lang-switcher .lang-btn[data-set-lang="de"] { background: black; color: #ffff00; }
+</style>
+<div class="lang-switcher" role="group" aria-label="Language" data-i18n-attr="aria-label:lang_switch_label">
+  <button type="button" class="lang-btn" data-set-lang="en" lang="en" aria-pressed="false">EN</button><span class="lang-sep" aria-hidden="true">/</span><button type="button" class="lang-btn" data-set-lang="de" lang="de" aria-pressed="false">DE</button>
+</div>

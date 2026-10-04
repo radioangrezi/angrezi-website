@@ -1,0 +1,97 @@
+<!-- EN/DE language switching. Texts live in _data/i18n.yml -->
+<script type="text/javascript">
+  window.ANGREZI_I18N = {{ site.data.i18n | jsonify }};
+  (function () {
+    var DEFAULT_LANG = "{{ site.default_lang | default: 'en' }}"; // en | de | auto (set in _config.yml)
+    var STORAGE_KEY = "angrezi-lang";
+    var root = document.documentElement;
+
+    function norm(l) { return l === "de" ? "de" : "en"; }
+    function detect() {
+      var saved = null;
+      try { saved = window.localStorage.getItem(STORAGE_KEY); } catch (e) {}
+      if (saved === "en" || saved === "de") return saved;
+      if (DEFAULT_LANG === "auto") {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || "en";
+        return String(nav).toLowerCase().indexOf("de") === 0 ? "de" : "en";
+      }
+      return norm(DEFAULT_LANG);
+    }
+
+    // Set before the page paints, so there is no flicker of the wrong language.
+    var initial = detect();
+    root.setAttribute("data-lang", initial);
+    root.setAttribute("lang", initial);
+
+    window.angreziLang = function () { return root.getAttribute("data-lang") === "de" ? "de" : "en"; };
+
+    // Plain text of a key in the current (or given) language, falling back to English.
+    window.angreziT = function (key, lang) {
+      var e = window.ANGREZI_I18N && window.ANGREZI_I18N[key];
+      if (!e) return key;
+      lang = lang || window.angreziLang();
+      return (e[lang] !== undefined && e[lang] !== null && e[lang] !== "") ? e[lang] : e.en;
+    };
+
+    // Both languages as HTML, for text that scripts write into the page.
+    window.angreziTHtml = function (key) {
+      return '<span class="i18n i18n-en" lang="en">' + window.angreziT(key, "en") + '</span>' +
+             '<span class="i18n i18n-de" lang="de">' + window.angreziT(key, "de") + '</span>';
+    };
+
+    // Attributes (placeholder, aria-label, tooltip...) declared as data-i18n-attr="attr:key;attr2:key2"
+    function applyAttrs() {
+      var els = document.querySelectorAll("[data-i18n-attr]");
+      for (var i = 0; i < els.length; i++) {
+        var pairs = els[i].getAttribute("data-i18n-attr").split(";");
+        for (var j = 0; j < pairs.length; j++) {
+          var p = pairs[j].split(":");
+          if (p.length === 2) els[i].setAttribute(p[0].replace(/^\s+|\s+$/g, ""), window.angreziT(p[1].replace(/^\s+|\s+$/g, "")));
+        }
+      }
+    }
+
+    function syncButtons() {
+      var btns = document.querySelectorAll("[data-set-lang]");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].setAttribute("aria-pressed", btns[i].getAttribute("data-set-lang") === window.angreziLang() ? "true" : "false");
+      }
+    }
+
+    window.angreziSetLang = function (lang) {
+      lang = norm(lang);
+      root.setAttribute("data-lang", lang);
+      root.setAttribute("lang", lang);
+      try { window.localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      applyAttrs();
+      syncButtons();
+      var ev;
+      try { ev = new CustomEvent("angrezi:langchange", { detail: { lang: lang } }); }
+      catch (e) { ev = document.createEvent("CustomEvent"); ev.initCustomEvent("angrezi:langchange", false, false, { lang: lang }); }
+      document.dispatchEvent(ev);
+    };
+
+    function onReady() {
+      applyAttrs();
+      syncButtons();
+      document.addEventListener("click", function (e) {
+        var el = e.target;
+        while (el && el !== document) {
+          if (el.getAttribute && el.getAttribute("data-set-lang")) {
+            e.preventDefault();
+            window.angreziSetLang(el.getAttribute("data-set-lang"));
+            return;
+          }
+          el = el.parentNode;
+        }
+      }, false);
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", onReady, false);
+    else onReady();
+  })();
+</script>
+<style>
+  /* Show only the active language (English when JavaScript is off) */
+  html:not([data-lang="de"]) .i18n-de { display: none !important; }
+  html[data-lang="de"] .i18n-en { display: none !important; }
+</style>

@@ -1,5 +1,6 @@
 <div class="marquee-wrapper">
     <div class="marquee">
-        <p class="now_playing">Welcome to Radio Angrezi! - <a href="https://t.me/radioangrezi">Notification when on air?</a></p>
+        <p class="now_playing">{% include t.html key="marquee_welcome" %} - <a href="https://t.me/radioangrezi">{% include t.html key="marquee_notify" %}</a></p>
     </div>
-</div>	
+    {% include lang_switcher.html %}
+</div>
